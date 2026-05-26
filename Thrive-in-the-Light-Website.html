@@ -1308,7 +1308,7 @@
           <label for="fmessage">Your message (optional)</label>
           <textarea id="fmessage" name="Message" rows="4" placeholder="Tell me a little about what's brought you here…"></textarea>
         </div>
-        <button type="submit" id="contact-submit-btn" class="cta-btn">Send Message</button>
+        <!-- Honeypot: hidden from humans, bots fill it in -->          <div style="display:none;" aria-hidden="true">
       </form>
       <div id="contact-success" style="display:none;text-align:center;padding:2rem;">
         <h3 style="color:var(--brand-mid);margin-bottom:0.75rem;">Message received!</h3>
@@ -1424,7 +1424,7 @@
     var interest = document.getElementById('finterest').value;
     var message  = document.getElementById('fmessage').value.trim();
     var btn      = document.getElementById('contact-submit-btn');
-    if (!name || !email) return;
+    // Honeypot check — bots fill this hidden field, humans never see it      if (document.getElementById('fwebsite').value) return;
     btn.disabled = true;
     btn.textContent = 'Sending…';
     fetch('https://api.brevo.com/v3/contacts', {
