@@ -1281,8 +1281,8 @@
       <h2>Send Me a Message</h2>
       <p class="form-intro">I read and reply to every message personally.</p>
 
-      <!-- PLACEHOLDER FORM — replace action="" with your form tool URL -->
-      <form action="mailto:etxladiesoflight@gmail.com" method="POST" enctype="text/plain">
+      <!-- Contact form — submits to Brevo API -->
+      <form id="contact-form" onsubmit="handleContactSubmit(event)">
         <div class="form-group">
           <label for="fname">Your first name</label>
           <input type="text" id="fname" name="Name" placeholder="e.g. Sarah" required />
@@ -1298,18 +1298,22 @@
             <option value="energy">More energy and vitality</option>
             <option value="sleep">Better sleep</option>
             <option value="comfort">Everyday physical comfort</option>
-            <option value="recovery">Recovery from exercise</option>
-            <option value="general">General wellness</option>
-            <option value="curious">Just curious, not sure yet</option>
+            <option value="weight">Weight management</option>
+            <option value="antiaging">Healthy ageing</option>
+            <option value="business">The business opportunity</option>
+            <option value="general">General curiosity</option>
           </select>
         </div>
         <div class="form-group">
           <label for="fmessage">Your message (optional)</label>
-          <textarea id="fmessage" name="Message" placeholder="Ask anything — there are no silly questions."></textarea>
+          <textarea id="fmessage" name="Message" rows="4" placeholder="Tell me a little about what's brought you here…"></textarea>
         </div>
-        <button type="submit" class="form-submit">Send My Message →</button>
-        <p class="form-privacy">Your details are kept private. No spam, ever. Unsubscribe any time.</p>
+        <button type="submit" id="contact-submit-btn" class="cta-btn">Send Message</button>
       </form>
+      <div id="contact-success" style="display:none;text-align:center;padding:2rem;">
+        <h3 style="color:var(--brand-mid);margin-bottom:0.75rem;">Message received!</h3>
+        <p>Thank you for reaching out. I'll be in touch soon.</p>
+      </div>
       <!-- END FORM PLACEHOLDER -->
 
     </div>
@@ -1412,6 +1416,37 @@
       window.scrollTo({ top: offset, behavior: 'smooth' });
     }
   }
+
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    var name     = document.getElementById('fname').value.trim();
+    var email    = document.getElementById('femail').value.trim();
+    var interest = document.getElementById('finterest').value;
+    var message  = document.getElementById('fmessage').value.trim();
+    var btn      = document.getElementById('contact-submit-btn');
+    if (!name || !email) return;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    fetch('https://api.brevo.com/v3/contacts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'api-key': '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'
+      },
+      body: JSON.stringify({
+        email: email,
+        attributes: { FIRSTNAME: name, INTEREST: interest, MESSAGE: message, SOURCE: 'website-contact-form' },
+        listIds: [3],
+        updateEnabled: true
+      })
+    })
+    .catch(function() {})
+    .finally(function() {
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('contact-success').style.display = 'block';
+    });
+  }
+
 </script>
 
 </body>
