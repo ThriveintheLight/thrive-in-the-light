@@ -89,6 +89,19 @@
       transition: opacity 0.2s;
     }
     .header-cta:hover { opacity: 0.85; text-decoration: none; }
+    .header-contact {
+      background: transparent;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 8px 14px;
+      border-radius: 20px;
+      border: 2px solid rgba(255,255,255,0.5);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .header-contact:hover { border-color: var(--white); text-decoration: none; color: var(--white); }
 
     /* ── HERO ── */
     .hero {
@@ -526,7 +539,10 @@
 <header class="site-header">
   <div class="container">
     <div class="site-logo">Thrive in YOUR <span>Light</span></div>
-    <a href="https://lifewave.com/carolinewhitton/store/products" target="_blank" class="header-cta">Visit My Shop →</a>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <button class="header-contact" onclick="showTab('contact')">✉ Contact</button>
+      <a href="https://lifewave.com/carolinewhitton/store/products" target="_blank" class="header-cta">Visit My Shop →</a>
+    </div>
   </div>
 </header>
 
@@ -570,7 +586,6 @@
       <button class="tab-btn"        onclick="showTab('how-it-works')" role="tab">How It Works</button>
       <button class="tab-btn"        onclick="showTab('products')"     role="tab">The Patches</button>
       <button class="tab-btn"        onclick="showTab('about')"        role="tab">About Caroline</button>
-      <button class="tab-btn" onclick="showTab('contact')" role="tab" style="background: var(--brand-mid); color: #fff; border-radius: 6px; font-weight: 700;">✉ Get in Touch</button>
       <button class="tab-btn"        onclick="showTab('faq')"          role="tab">FAQs</button>
     </div>
   </div>
