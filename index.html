@@ -1542,6 +1542,22 @@
       window.scrollTo({ top: offset, behavior: 'smooth' });
     }
   }
+
+  // Handle ?tab= parameter from external links (e.g. x2o.html)
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get('tab');
+    if (tab) {
+      showTab(tab);
+      const hash = window.location.hash.replace('#','');
+      if (hash) {
+        setTimeout(function() {
+          const el = document.getElementById(hash);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 200);
+      }
+    }
+  })();
 </script>
 
 </body>
