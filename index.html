@@ -1544,7 +1544,7 @@
   }
 
   // Handle ?tab= parameter from external links (e.g. x2o.html)
-  (function() {
+  window.addEventListener('load', function() {
     const params = new URLSearchParams(window.location.search);
     const tab = params.get('tab');
     if (tab) {
@@ -1554,10 +1554,10 @@
         setTimeout(function() {
           const el = document.getElementById(hash);
           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 200);
+        }, 500);
       }
     }
-  })();
+  });
 </script>
 
 </body>
