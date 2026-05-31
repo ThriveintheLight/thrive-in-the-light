@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeWave X₂O™ Light Water Technology | Thrive in Your Light</title>
+  <meta name="description" content="LifeWave X₂O™ — the world's first light-infused water system. Dual-stage filtration, hydrogen enrichment, and patented light technology. Starting at $7/day." />
+
+  <style>
+    :root {
+      --gold:        #c9a84c;
+      --gold-light:  #f0c040;
+      --gold-pale:   #fff5cc;
+      --dark:        #050e1c;
+      --dark-mid:    #0a1628;
+      --dark-card:   #0f1e35;
+      --border:      #1e4d8c;
+      --blue-light:  #4db8e8;
+      --blue-pale:   #a8c4e0;
+      --white:       #ffffff;
+      --text-muted:  #8aabb8;
+      --radius:      14px;
+      --max-width:   920px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--blue-pale);
+      background: var(--dark);
+    }
+    h1, h2, h3, h4, .cta-btn, nav, button {
+      font-family: 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif;
+    }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; color: var(--gold-light); }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+
+    /* ── NAV ── */
+    .site-header {
+      background: #030912;
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+    .site-header .container { display: flex; align-items: center; justify-content: space-between; }
+    .site-logo { font-size: 1.05rem; font-weight: 700; color: var(--white); }
+    .site-logo span { color: var(--gold); }
+    .nav-back { font-size: 0.9rem; color: var(--gold); font-family: 'Trebuchet MS', sans-serif; }
+    .nav-back:hover { color: var(--white); }
+
+    /* ── HERO IMAGE ── */
+    .hero-image-wrap {
+      width: 100%;
+      background: var(--dark);
+      line-height: 0;
+      position: relative;
+    }
+    .hero-image-wrap img { width: 100%; display: block; }
+    .hero-image-wrap .fade-bottom {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(transparent, var(--dark));
+    }
+
+    /* ── HERO TEXT ── */
+    .hero-text {
+      background: var(--dark);
+      text-align: center;
+      padding: 36px 20px 52px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Trebuchet MS', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+    .hero-text h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .hero-text h1 span { color: var(--gold); }
+    .hero-text .tagline {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--gold-light);
+      margin-bottom: 16px;
+    }
+    .hero-text p {
+      font-size: 1.05rem;
+      color: var(--blue-pale);
+      max-width: 620px;
+      margin: 0 auto 30px;
+    }
+    .hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-family: 'Trebuchet MS', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+      cursor: pointer;
+    }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); text-decoration: none; }
+    .cta-primary { background: var(--gold); color: #0a0a0a; }
+    .cta-secondary {
+      background: transparent;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+    }
+
+    /* ── PRICE STRIP ── */
+    .price-strip {
+      background: linear-gradient(135deg, #0a1628, #0f2240);
+      border-top: 1px solid rgba(201,168,76,0.3);
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .price-strip .price-main {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--gold);
+      font-family: 'Trebuchet MS', sans-serif;
+      line-height: 1;
+    }
+    .price-strip .price-sub { font-size: 0.9rem; color: var(--blue-pale); margin-top: 6px; }
+    .price-strip .price-note { font-size: 0.78rem; color: var(--text-muted); margin-top: 8px; }
+
+    /* ── SECTION ── */
+    section { padding: 60px 20px; }
+    .section-label {
+      display: inline-block;
+      font-family: 'Trebuchet MS', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    h3 { color: var(--white); }
+    p { margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── INFOGRAPHIC IMAGE SECTIONS ── */
+    .full-image-section {
+      padding: 0;
+      line-height: 0;
+      background: var(--dark);
+    }
+    .full-image-section img { width: 100%; border-radius: 0; }
+
+    /* ── 3-STEP CARDS ── */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: var(--max-width);
+      margin: 32px auto 0;
+    }
+    @media (max-width: 640px) { .steps-grid { grid-template-columns: 1fr; } }
+    .step-card {
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .step-corner { position: absolute; top: 0; right: 0; width: 60px; height: 60px; border-radius: 0 var(--radius) 0 60px; opacity: 0.4; }
+    .step-num { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    .step-card h3 { font-size: 1rem; color: var(--white); margin-bottom: 8px; }
+    .step-card p { font-size: 0.88rem; margin: 0; }
+    .step-icon { font-size: 2rem; margin-bottom: 10px; }
+
+    /* ── BENEFIT GRID ── */
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: var(--max-width);
+      margin: 32px auto 0;
+    }
+    @media (max-width: 580px) { .benefit-grid { grid-template-columns: 1fr; } }
+    .benefit-card { border-radius: var(--radius); padding: 22px 20px; position: relative; overflow: hidden; }
+    .b-corner { position: absolute; top: 0; right: 0; width: 50px; height: 50px; border-radius: 0 var(--radius) 0 50px; opacity: 0.35; }
+    .benefit-card .b-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+    .benefit-card h3 { font-size: 0.98rem; color: var(--white); margin-bottom: 6px; }
+    .benefit-card p { font-size: 0.86rem; margin: 0; }
+
+    /* ── SPECS BOX ── */
+    .specs-box {
+      background: linear-gradient(135deg, var(--dark-mid), var(--dark-card));
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: var(--radius);
+      padding: 32px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.92rem;
+      gap: 20px;
+    }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-label { color: var(--text-muted); flex-shrink: 0; }
+    .spec-value { color: var(--white); text-align: right; }
+
+    /* ── PAIRING SECTION ── */
+    .pairing-box {
+      background: linear-gradient(135deg, #0a1628, #0f2240);
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .pairing-box h2 { color: var(--gold); margin-bottom: 14px; }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: var(--max-width); margin: 28px auto 0; }
+    details {
+      background: linear-gradient(135deg, var(--dark-mid), var(--dark-card));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    summary {
+      padding: 18px 22px;
+      cursor: pointer;
+      color: var(--white);
+      font-family: 'Trebuchet MS', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 600;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; color: var(--gold); font-size: 1.3rem; flex-shrink: 0; margin-left: 12px; }
+    details[open] summary::after { content: '−'; }
+    details p {
+      padding: 0 22px 18px;
+      font-size: 0.9rem;
+      color: var(--blue-pale);
+      margin: 0;
+    }
+
+    /* ── LEAD CAPTURE ── */
+    .lead-section {
+      background: linear-gradient(135deg, #0a1218, #0f1e2e);
+      border-top: 1px solid rgba(201,168,76,0.25);
+      border-bottom: 1px solid rgba(201,168,76,0.25);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .lead-section h2 { color: var(--gold); margin-bottom: 12px; }
+    .lead-section p { color: var(--blue-pale); max-width: 540px; margin: 0 auto 28px; }
+    .lead-form {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .lead-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 13px 18px;
+      border-radius: 30px;
+      border: 1px solid rgba(201,168,76,0.4);
+      background: rgba(255,255,255,0.05);
+      color: var(--white);
+      font-size: 0.95rem;
+      font-family: 'Trebuchet MS', sans-serif;
+      outline: none;
+    }
+    .lead-form input::placeholder { color: var(--text-muted); }
+    .lead-form input:focus { border-color: var(--gold); }
+    .lead-form button {
+      background: var(--gold);
+      color: #0a0a0a;
+      border: none;
+      border-radius: 30px;
+      padding: 13px 28px;
+      font-family: 'Trebuchet MS', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .lead-form button:hover { opacity: 0.88; }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: var(--dark);
+      text-align: center;
+      padding: 70px 20px;
+    }
+    .cta-section h2 { color: var(--white); margin-bottom: 12px; }
+    .cta-section p { color: var(--blue-pale); max-width: 520px; margin: 0 auto 30px; }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      background: #030912;
+      padding: 24px 20px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .disclaimer p { margin-bottom: 4px; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: #030912;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.88rem;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    .site-footer a { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<header class="site-header">
+  <div class="container">
+    <div class="site-logo">Thrive in <span>YOUR</span> Light</div>
+    <a href="index.html" class="nav-back">← Back to Home</a>
+  </div>
+</header>
+
+<!-- ── HERO IMAGE — "Meet X2O Light Water Technology" ── -->
+<div class="hero-image-wrap">
+  <img src="Light Water/Water X2O.jpg" alt="LifeWave X2O — Meet Light Water Technology" />
+  <div class="fade-bottom"></div>
+</div>
+
+<!-- ── HERO TEXT ── -->
+<div class="hero-text">
+  <div class="hero-badge">⚡ Limited Weekly Release — Selling Out Fast</div>
+  <h1>LifeWave X₂O™<br><span>Light-Infused™ Water</span></h1>
+  <p class="tagline">It's not just water. It's a cellular upgrade.</p>
+  <p>The world's first hydration system that infuses water with light — combining dual-stage filtration, hydrogen enrichment, and patented light-infusion technology to support hydration, energy, and wellness at the cellular level.</p>
+  <div class="hero-buttons">
+    <a href="#notify" class="cta-btn cta-primary">Notify Me at Launch</a>
+    <a href="#how-it-works" class="cta-btn cta-secondary">How It Works</a>
+  </div>
+</div>
+
+<!-- ── PRICE STRIP ── -->
+<div class="price-strip">
+  <div class="price-main">$5,495</div>
+  <div class="price-sub">Starting at <strong style="color:var(--gold);">$7/day*</strong> &nbsp;·&nbsp; PayPal Buy Now Pay Later available</div>
+
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px;">
+
+    <div style="background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.5);border-radius:10px;padding:14px 22px;text-align:left;max-width:280px;">
+      <div style="color:var(--gold);font-family:'Trebuchet MS',sans-serif;font-weight:700;font-size:0.88rem;margin-bottom:4px;">✦ Brand Partner Price</div>
+      <div style="color:var(--white);font-family:'Trebuchet MS',sans-serif;font-size:1.2rem;font-weight:700;">$5,495</div>
+      <div style="color:var(--text-muted);font-size:0.78rem;margin-top:4px;">Join for just <strong style="color:var(--white);">$25/year</strong> to unlock this price</div>
+    </div>
+
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:14px 22px;text-align:left;max-width:280px;">
+      <div style="color:var(--blue-light);font-family:'Trebuchet MS',sans-serif;font-weight:700;font-size:0.88rem;margin-bottom:4px;">Retail Price (Coming June)</div>
+      <div style="color:var(--white);font-family:'Trebuchet MS',sans-serif;font-size:1.2rem;font-weight:700;">Higher — TBA</div>
+      <div style="color:var(--text-muted);font-size:0.78rem;margin-top:4px;">Estimated ~$500+ more than Brand Partner price</div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:16px;background:rgba(255,80,80,0.1);border:1px solid rgba(255,100,100,0.3);border-radius:8px;padding:10px 20px;display:inline-block;">
+    <span style="color:#ff9090;font-family:'Trebuchet MS',sans-serif;font-size:0.85rem;font-weight:700;">⚠ Limited Availability</span>
+    <span style="color:var(--blue-pale);font-size:0.82rem;"> — Only 450–500 units released per week. Has sold out every release since launch.</span>
+  </div>
+  <div class="price-note" style="margin-top:10px;">*Based on product price over 24 months. Excludes taxes, shipping, fees, interest, and financing charges. Not available in CA, WI, or IA at launch.</div>
+</div>
+
+<!-- ── INFOGRAPHIC 1 (Real Value overview) ── -->
+<div class="full-image-section">
+  <img src="Light Water/water info 1.jpg" alt="X2O Water — The Real Value infographic" />
+</div>
+
+<!-- ── HOW IT WORKS — 3 STEPS ── -->
+<section id="how-it-works">
+  <div class="container" style="max-width:var(--max-width);margin:0 auto;">
+    <span class="section-label">The Technology</span>
+    <h2>Three Steps to Light-Infused Water</h2>
+    <p>X₂O doesn't just filter your water — it transforms it through a three-stage process unlike anything else on the market.</p>
+    <div class="steps-grid">
+      <div class="step-card" style="background:linear-gradient(135deg,#071a2e,#0a2540);border:1px solid #1a6b9e;">
+        <div class="step-corner" style="background:#1a6b9e;"></div>
+        <div class="step-icon">🔬</div>
+        <div class="step-num" style="color:#4db8e8;">Step 1</div>
+        <h3>Filtration</h3>
+        <p style="color:#a0d4ee;">Dual-stage filtration removes heavy metals, chlorine byproducts, microplastics, and PFAS "forever chemicals." Remove what shouldn't be there.</p>
+      </div>
+      <div class="step-card" style="background:linear-gradient(135deg,#0d1f0d,#163016);border:1px solid #2d6e2d;">
+        <div class="step-corner" style="background:#2d6e2d;"></div>
+        <div class="step-icon">⚛️</div>
+        <div class="step-num" style="color:#5cb85c;">Step 2</div>
+        <h3>Hydrogen Enrichment</h3>
+        <p style="color:#a8d4a8;">Molecular hydrogen (H₂) is added — small enough to penetrate cells and even mitochondria. Supports oxidative stress reduction and recovery.</p>
+      </div>
+      <div class="step-card" style="background:linear-gradient(135deg,#1a1400,#2a2000);border:1px solid #7a6000;">
+        <div class="step-corner" style="background:#7a6000;"></div>
+        <div class="step-icon">💡</div>
+        <div class="step-num" style="color:#f0c040;">Step 3</div>
+        <h3>Light Infusion</h3>
+        <p style="color:#e0d090;">Patented light-infusion technology embeds specific light frequencies into the water to support cellular communication and energy dynamics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INFOGRAPHIC 2 (full science breakdown) ── -->
+<div class="full-image-section">
+  <img src="Light Water/water info 2.jpg" alt="X2O Water science and benefits infographic" />
+</div>
+
+<!-- ── BENEFITS ── -->
+<section>
+  <div class="container" style="max-width:var(--max-width);margin:0 auto;">
+    <span class="section-label">What It Supports</span>
+    <h2>What X₂O Water May Do for You</h2>
+    <p>When you combine clean water + hydrogen support + bioenergetic enhancement, you're creating a better internal environment for your cells.</p>
+    <div class="benefit-grid">
+      <div class="benefit-card" style="background:linear-gradient(135deg,#071a2e,#0a2540);border:1px solid #1a6b9e;">
+        <div class="b-corner" style="background:#1a6b9e;"></div>
+        <div class="b-label" style="color:#4db8e8;">Hydration</div>
+        <h3>Cellular Hydration</h3>
+        <p style="color:#a0d4ee;">Light-infused water is designed to support hydration at the cellular level — not just surface-level thirst quenching.</p>
+      </div>
+      <div class="benefit-card" style="background:linear-gradient(135deg,#1a1400,#2a2000);border:1px solid #7a6000;">
+        <div class="b-corner" style="background:#7a6000;"></div>
+        <div class="b-label" style="color:#f0c040;">Energy</div>
+        <h3>Energy Production</h3>
+        <p style="color:#e0d090;">Molecular hydrogen and light infusion work together to support mitochondrial function and natural energy generation.</p>
+      </div>
+      <div class="benefit-card" style="background:linear-gradient(135deg,#0d1f0d,#163016);border:1px solid #2d6e2d;">
+        <div class="b-corner" style="background:#2d6e2d;"></div>
+        <div class="b-label" style="color:#5cb85c;">Recovery</div>
+        <h3>Faster Recovery</h3>
+        <p style="color:#a8d4a8;">H₂ may reduce oxidative stress and support inflammation markers — ideal for active lifestyles and daily wellness.</p>
+      </div>
+      <div class="benefit-card" style="background:linear-gradient(135deg,#1a0a2e,#280f40);border:1px solid #6a3d9e;">
+        <div class="b-corner" style="background:#6a3d9e;"></div>
+        <div class="b-label" style="color:#b07ee0;">Longevity</div>
+        <h3>Aging & Longevity</h3>
+        <p>Linked to reversing cellular aging and restoring youthful physiological function. Drink smarter, not just more.</p>
+      </div>
+      <div class="benefit-card" style="background:linear-gradient(135deg,#1a0818,#2a1028);border:1px solid #9b3d8e;">
+        <div class="b-corner" style="background:#9b3d8e;"></div>
+        <div class="b-label" style="color:#e090d0;">Synergy</div>
+        <h3>Works with Your Patches</h3>
+        <p style="color:#f0b8e8;">Light-infused water complements the biophotonic signaling in LifeWave patches — amplifying effects from the inside out.</p>
+      </div>
+      <div class="benefit-card" style="background:linear-gradient(135deg,#05101e,#0a1830);border:1px solid #1a3a6e;">
+        <div class="b-corner" style="background:#1a3a6e;"></div>
+        <div class="b-label" style="color:#7090d0;">Purity</div>
+        <h3>Clean Foundation</h3>
+        <p style="color:#a8b8e0;">Before anything advanced — remove the bad. Most tap water contains contaminants your body doesn't need. X₂O starts there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW TO USE ── -->
+<section style="background:linear-gradient(135deg,#0a1628,#0f2240);">
+  <div class="container" style="max-width:var(--max-width);margin:0 auto;">
+    <span class="section-label">Daily Use</span>
+    <h2>How to Use X₂O</h2>
+    <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(201,168,76,0.2);border-left:4px solid var(--gold);border-radius:var(--radius);padding:28px 32px;margin-top:24px;">
+      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;">
+        <li style="display:flex;gap:14px;align-items:flex-start;color:var(--blue-pale);font-size:0.93rem;"><span style="color:var(--gold);font-weight:700;flex-shrink:0;">1.</span><span>Fill the 2-litre reservoir with your preferred water (tap, spring, filtered, or distilled). Do not use alkaline or carbonated water.</span></li>
+        <li style="display:flex;gap:14px;align-items:flex-start;color:var(--blue-pale);font-size:0.93rem;"><span style="color:var(--gold);font-weight:700;flex-shrink:0;">2.</span><span>Power on and select your treatment cycle. The system automatically filters, enriches with hydrogen, and infuses with light.</span></li>
+        <li style="display:flex;gap:14px;align-items:flex-start;color:var(--blue-pale);font-size:0.93rem;"><span style="color:var(--gold);font-weight:700;flex-shrink:0;">3.</span><span>In approximately <strong style="color:var(--white);">45 minutes</strong>, two 450 ml (15 oz) glasses are ready. Drink immediately — water is best consumed right after dispensing.</span></li>
+        <li style="display:flex;gap:14px;align-items:flex-start;color:var(--blue-pale);font-size:0.93rem;"><span style="color:var(--gold);font-weight:700;flex-shrink:0;">4.</span><span>Best taken <strong style="color:var(--white);">in the morning on an empty stomach</strong>, at room temperature, in a glass container only. One 450 ml glass per day recommended.</span></li>
+        <li style="display:flex;gap:14px;align-items:flex-start;color:var(--blue-pale);font-size:0.93rem;"><span style="color:var(--gold);font-weight:700;flex-shrink:0;">5.</span><span>Replace reservoir water every 2–3 days. Smart display alerts you when filters need replacing (approximately every 6 months).</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── SPECS ── -->
+<section>
+  <div class="container" style="max-width:var(--max-width);margin:0 auto;">
+    <span class="section-label">Product Details</span>
+    <h2>Specifications</h2>
+    <div class="specs-box">
+      <div class="spec-row"><span class="spec-label">Product ID</span><span class="spec-value">LW-X2O-WM-USA</span></div>
+      <div class="spec-row"><span class="spec-label">Reservoir Capacity</span><span class="spec-value">2 litres</span></div>
+      <div class="spec-row"><span class="spec-label">Cycle Time</span><span class="spec-value">~45 minutes per 2 glasses</span></div>
+      <div class="spec-row"><span class="spec-label">Serving Size</span><span class="spec-value">450 ml / 15 oz (1 glass per day recommended)</span></div>
+      <div class="spec-row"><span class="spec-label">Water Dispensed Temperature</span><span class="spec-value">Room temperature (68–77°F / 20–25°C)</span></div>
+      <div class="spec-row"><span class="spec-label">Primary Filter Life</span><span class="spec-value">Up to 250 gallons (~6 months)</span></div>
+      <div class="spec-row"><span class="spec-label">Secondary Filter Life</span><span class="spec-value">Up to 150 gallons (~6 months)</span></div>
+      <div class="spec-row"><span class="spec-label">Primary Filter Replacement</span><span class="spec-value">$75 (Brand Partner) · $85 (Preferred) · $95 (Retail)</span></div>
+      <div class="spec-row"><span class="spec-label">Secondary Filter Replacement</span><span class="spec-value">$65 (Brand Partner) · $75 (Preferred) · $85 (Retail)</span></div>
+      <div class="spec-row"><span class="spec-label">Price</span><span class="spec-value">$5,495 USD (Brand Partner exclusive) · from ~$7/day over 24 months*</span></div>
+      <div class="spec-row"><span class="spec-label">Brand Partner Fee</span><span class="spec-value">$25/year — one-time annual fee, unlocks all partner pricing</span></div>
+      <div class="spec-row"><span class="spec-label">Availability</span><span class="spec-value">USA (excl. CA, WI, IA at launch) · International 2026</span></div>
+      <div class="spec-row"><span class="spec-label">Financing</span><span class="spec-value">PayPal Buy Now Pay Later available at checkout</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PATCH SYNERGY IMAGE ── -->
+<div class="full-image-section">
+  <img src="Light Water/1ce6a3b9-8788-4a37-b884-56f628cf2028.png" alt="Thrive in Your Light Water — Independent Brand Partner" />
+</div>
+
+<!-- ── PATCH PAIRING ── -->
+<section>
+  <div class="container">
+    <div class="pairing-box">
+      <span class="section-label">The Complete System</span>
+      <h2>Pair X₂O with Your LifeWave Patches</h2>
+      <p style="color:var(--blue-pale);max-width:600px;margin:0 auto 24px;">Light-infused water complements the biophotonic signaling used in LifeWave patches. Drinking this water "from the inside" amplifies the effects of patches applied "from the outside." Together, they create a complete light-wellness system.</p>
+      <a href="index.html#tab-products" class="cta-btn cta-secondary">Explore the Patches</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section style="background:linear-gradient(135deg,#0a1628,#0f2240);">
+  <div class="container" style="max-width:var(--max-width);margin:0 auto;">
+    <span class="section-label">Questions</span>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <details>
+        <summary>What makes X₂O different from a regular water filter?</summary>
+        <p>X₂O is the first system to deliver light into the body through the water you drink. It goes beyond filtration to energize and optimize hydration from within — with some reporting effects occurring within seconds of consumption.</p>
+      </details>
+      <details>
+        <summary>How quickly can I feel the effects?</summary>
+        <p>You may feel results in seconds. The patented light processing technology infuses light into the water for incredible health benefits — some people feel results in less than a minute of drinking.</p>
+      </details>
+      <details>
+        <summary>How long do the benefits last?</summary>
+        <p>Immediate effects such as improved hydration or energy may be felt within minutes and last several hours. X₂O is most effective for long-term wellness when used consistently as part of your daily hydration routine.</p>
+      </details>
+      <details>
+        <summary>Can I cook with the water or add ice?</summary>
+        <p>We do not recommend boiling the water as it may lose efficacy. Drink at room temperature with no ice for maximum benefit. Only use glass containers — never plastic.</p>
+      </details>
+      <details>
+        <summary>What water sources can I use?</summary>
+        <p>You may use tap, spring, filtered, distilled, or deuterium-depleted water. Do not use alkaline, carbonated water, or add minerals.</p>
+      </details>
+      <details>
+        <summary>When is it launching and who can buy it?</summary>
+        <p>X₂O will launch in the US in 2026, initially available exclusively to LifeWave Brand Partners. California, Wisconsin, and Iowa have temporary restrictions that are expected to lift in 2026. International markets will be announced throughout 2026.</p>
+      </details>
+      <details>
+        <summary>Is financing available?</summary>
+        <p>Yes — PayPal's Buy Now, Pay Later options are available at checkout. Approval is typically instant and subject to PayPal's assessment. Filter replacements are not eligible for financing.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEAD CAPTURE ── -->
+<div class="lead-section" id="notify">
+  <span class="section-label">Be First to Know</span>
+  <h2>Get Notified at Launch</h2>
+  <p>X₂O is launching exclusively for Brand Partners first. Drop your email and I'll reach out the moment it's available — with full details on ordering and financing.</p>
+  <form class="lead-form" onsubmit="handleSubmit(event)">
+    <input type="email" placeholder="Your email address" required />
+    <button type="submit">Notify Me →</button>
+  </form>
+  <p id="form-confirm" style="display:none;margin-top:16px;color:var(--gold);font-family:'Trebuchet MS',sans-serif;">✓ You're on the list! I'll be in touch.</p>
+  <p style="margin-top:16px;font-size:0.82rem;color:var(--text-muted);">Or email Caroline directly: <a href="mailto:etxladiesoflight@gmail.com">etxladiesoflight@gmail.com</a></p>
+</div>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <span class="section-label">Ready to Learn More?</span>
+  <h2>Hydrate Smarter.<br>Thrive in Your Light.</h2>
+  <p>Have questions before launch? Caroline is happy to walk you through everything — pricing, financing, and how X₂O fits into your wellness routine.</p>
+  <a href="mailto:etxladiesoflight@gmail.com" class="cta-btn cta-primary">Contact Caroline</a>
+</section>
+
+<!-- ── DISCLAIMER ── -->
+<div class="disclaimer">
+  <div class="container">
+    <p>*Starting at $7/day based on product price of $5,495 over 24 months. Excludes taxes, shipping, fees, interest, and financing charges.</p>
+    <p>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+    <p>LifeWave X₂O is not currently available in California, Wisconsin, or Iowa. Availability subject to change.</p>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Thrive in YOUR Light &nbsp;|&nbsp; Caroline Whitton, LifeWave Brand Partner</p>
+    <p><a href="https://lifewave.com/carolinewhitton" target="_blank">lifewave.com/carolinewhitton</a> &nbsp;|&nbsp; <a href="mailto:etxladiesoflight@gmail.com">etxladiesoflight@gmail.com</a></p>
+    <p style="margin-top:8px;"><a href="index.html">← Back to Homepage</a></p>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('form-confirm').style.display = 'block';
+    e.target.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
