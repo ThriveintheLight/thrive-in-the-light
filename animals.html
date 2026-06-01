@@ -211,16 +211,44 @@
       margin: 32px auto 0;
     }
     .benefit-card {
-      background: var(--white);
-      border: 1px solid #d4e8ed;
-      border-top: 3px solid var(--brand-accent);
+      background: linear-gradient(135deg, #071a2e, #0a2540);
+      border: 1px solid #1a6b9e;
       border-radius: var(--radius);
       padding: 24px 20px;
-      box-shadow: var(--shadow);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 50px; height: 50px;
+      background: #1a6b9e;
+      border-radius: 0 var(--radius) 0 50px;
+      opacity: 0.35;
     }
     .benefit-card .icon { font-size: 1.8rem; margin-bottom: 10px; }
-    .benefit-card h3 { font-size: 1rem; color: var(--brand-dark); margin-bottom: 8px; }
-    .benefit-card p { font-size: 0.92rem; color: var(--text-muted); margin: 0; }
+    .benefit-card h3 { font-size: 1rem; color: #ffffff; margin-bottom: 8px; }
+    .benefit-card p { font-size: 0.92rem; color: #a0d4ee; margin: 0; }
+    /* Dog section cards — gold toned */
+    .benefit-card.gold {
+      background: linear-gradient(135deg, #1a1400, #2a2000);
+      border-color: #7a6000;
+    }
+    .benefit-card.gold::before { background: #7a6000; }
+    .benefit-card.gold h3 { color: #ffffff; }
+    .benefit-card.gold p { color: #e0d090; }
+    /* Horse grid — fixed 3 columns */
+    .benefit-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: var(--max-width);
+      margin: 32px auto 0;
+    }
+    @media (max-width: 640px) { .benefit-grid-3 { grid-template-columns: 1fr; } }
+    @media (min-width: 641px) and (max-width: 860px) { .benefit-grid-3 { grid-template-columns: repeat(2, 1fr); } }
 
     /* ── DIVIDER ── */
     .animal-divider {
@@ -375,7 +403,7 @@
       <h2>Benefits for Horses</h2>
       <p style="color:var(--text-muted);">Each patch works for up to 12 hours, with residual effects noted for up to 24 hours.</p>
     </div>
-    <div class="benefit-grid">
+    <div class="benefit-grid-3">
       <div class="benefit-card">
         <div class="icon">🐎</div>
         <h3>Pain Relief</h3>
@@ -411,6 +439,7 @@
 </section>
 
 <!-- ── HORSE RESEARCH SECTION ── -->
+
 <section>
   <div class="container" style="max-width:var(--max-width);margin:0 auto;">
     <span class="section-label">The Science</span>
@@ -455,7 +484,10 @@
       <p>Our dogs give us everything. As they age, or after a tough day of activity, they deserve the same gentle support we give ourselves.</p>
       <p>LifeWave patches — including the X39® stem cell activation patch and AcuLife® — can be used on dogs to support their natural wellbeing. Applied to acupressure points on the body, the patches work with your dog's own light to encourage comfort, calm, and recovery.</p>
       <p>Many pet owners use patches to support <strong>older dogs with stiffness</strong>, dogs recovering from activity, or anxious animals seeking calm. No drugs. No side effects. Just gentle, natural support.</p>
-      <a href="https://lifewave.com/carolinewhitton" target="_blank" style="display:inline-block;margin-top:12px;font-family:'Trebuchet MS',sans-serif;font-size:0.92rem;color:var(--brand-accent);font-weight:600;">Shop patches for pets →</a>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;">
+        <a href="https://lifewave.com/carolinewhitton/store/product/39000.022.009" target="_blank" class="cta-btn" style="font-size:0.9rem;padding:10px 22px;">Shop X39® for Dogs →</a>
+        <a href="https://lifewave.com/carolinewhitton/store/product/30001.022.001" target="_blank" class="cta-btn outline" style="font-size:0.9rem;padding:10px 22px;">Shop AcuLife® →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -468,22 +500,22 @@
       <h2>Benefits for Dogs &amp; Companion Animals</h2>
     </div>
     <div class="benefit-grid">
-      <div class="benefit-card">
+      <div class="benefit-card gold">
         <div class="icon">🦴</div>
         <h3>Joint Comfort</h3>
         <p>Supports older or active dogs experiencing stiffness or discomfort after exercise.</p>
       </div>
-      <div class="benefit-card">
+      <div class="benefit-card gold">
         <div class="icon">😌</div>
         <h3>Calm &amp; Relaxation</h3>
         <p>Many owners report a noticeable sense of calm in anxious or restless pets.</p>
       </div>
-      <div class="benefit-card">
+      <div class="benefit-card gold">
         <div class="icon">🔄</div>
         <h3>Recovery Support</h3>
         <p>Gentle support for the body's natural recovery after physical activity or stress.</p>
       </div>
-      <div class="benefit-card">
+      <div class="benefit-card gold">
         <div class="icon">🌿</div>
         <h3>Completely Natural</h3>
         <p>Nothing enters your pet's body — no risk of drug interactions or side effects.</p>
