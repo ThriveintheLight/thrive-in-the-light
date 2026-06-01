@@ -231,6 +231,11 @@
     .spec-row:last-child { border-bottom: none; }
     .spec-label { color: var(--text-muted); flex-shrink: 0; }
     .spec-value { color: var(--white); text-align: right; }
+    @media (max-width: 580px) {
+      .spec-row { flex-direction: column; gap: 4px; padding: 12px 0; }
+      .spec-value { text-align: left; color: var(--white); font-weight: 600; }
+      .specs-box { padding: 20px 16px; }
+    }
 
     /* ── PAIRING SECTION ── */
     .pairing-box {
