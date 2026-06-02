@@ -105,7 +105,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: #1a2340;
+      background: #050e1c;
       color: var(--white);
       padding: 72px 20px 60px;
       text-align: center;
@@ -533,12 +533,13 @@
     /* ── LIFESTYLE PHOTO SECTION ── */
     .lifestyle-photo-section {
       width: 100%;
+      overflow: hidden;
       line-height: 0;
     }
     .lifestyle-photo-section img {
       width: 100%;
-      height: auto;
       display: block;
+      object-fit: cover;
     }
 </style>
 </head>
@@ -585,8 +586,21 @@
       energy, and everyday vitality.
     </p>
     <div class="hero-buttons">
-      <a href="#" onclick="showTab('products'); return false;" class="cta-btn cta-primary">Explore the Patches</a>
-      <a href="#" onclick="showTab('how-it-works'); return false;" class="cta-btn cta-secondary">How It Works</a>
+      <a href="#" onclick="showTab('products'); return false;" class="cta-btn cta-primary">For People</a>
+      <a href="animals.html" class="cta-btn cta-secondary">For Animals</a>
+    </div>
+    <div style="margin-top:24px;">
+      <style>
+        @keyframes goldPulse {
+          0%, 100% { box-shadow: 0 0 10px rgba(201,168,76,0.4), 0 0 20px rgba(201,168,76,0.2); }
+          50% { box-shadow: 0 0 20px rgba(201,168,76,0.7), 0 0 40px rgba(201,168,76,0.35); }
+        }
+      </style>
+      <a href="x2o.html" style="display:inline-block;background:linear-gradient(135deg,#0a1e3a,#0f2e50);border:1px solid rgba(201,168,76,0.7);border-radius:16px;padding:20px 36px;text-decoration:none;animation:goldPulse 2.5s ease-in-out infinite;max-width:480px;width:100%;text-align:center;">
+        <div style="font-family:'Trebuchet MS',sans-serif;font-size:0.72rem;letter-spacing:2.5px;text-transform:uppercase;color:#4db8e8;margin-bottom:6px;">✦ Exclusively from LifeWave</div>
+        <div style="font-family:Georgia,serif;font-size:1.3rem;font-weight:700;font-style:italic;color:#f0c040;margin-bottom:4px;">LIGHT Water. LIGHT Years Ahead.</div>
+        <div style="font-family:'Trebuchet MS',sans-serif;font-size:0.88rem;color:rgba(255,255,255,0.85);">The only patented light-infused water technology on earth &nbsp;→</div>
+      </a>
     </div>
   </div>
 </section>
@@ -609,8 +623,9 @@
   <div class="container">
     <div class="tabs-scroller" role="tablist">
       <button class="tab-btn active" onclick="showTab('home')"        role="tab">Home</button>
-      <button class="tab-btn"        onclick="showTab('how-it-works')" role="tab">How It Works</button>
-      <button class="tab-btn"        onclick="showTab('products')"     role="tab">The Patches</button>
+      <button class="tab-btn"        onclick="showTab('products')"     role="tab">For People</button>
+      <a href="animals.html" class="tab-btn" role="tab">For Animals</a>
+      <a href="x2o.html" class="tab-btn" role="tab">💧 X₂O Water</a>
       <button class="tab-btn"        onclick="showTab('about')"        role="tab">About Caroline</button>
       <button class="tab-btn"        onclick="showTab('faq')"          role="tab">FAQs</button>
     </div>
@@ -646,6 +661,64 @@
       works on the surface — and the effects happen from within.
     </p>
 
+    <!-- HOW IT WORKS -->
+    <h2 class="mt-md">How It Works</h2>
+    <p>
+      Your body constantly emits infrared light — a form of energy invisible to the eye but very real.
+      LifeWave patches are embedded with organic nanocrystals that are activated by this light.
+      When worn on the skin, they reflect specific wavelengths back into the body at acupressure points,
+      signalling your body to initiate its own natural processes.
+    </p>
+    <p>
+      Think of it like sunlight triggering vitamin D production in your skin — except here, your
+      <em>own</em> body heat is the energy source. Nothing enters your body. The patch never breaks
+      the skin. It simply communicates through light.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0 40px;">
+      <div style="background:linear-gradient(135deg,#071a2e,#0a2540);border:1px solid #1a6b9e;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden;text-align:center;">
+        <div style="position:absolute;top:0;right:0;width:60px;height:60px;background:#1a6b9e;border-radius:0 14px 0 60px;opacity:0.4;"></div>
+        <div style="font-size:1.8rem;margin-bottom:8px;">🌡️</div>
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#4db8e8;margin-bottom:4px;">Step 1</div>
+        <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">Body Heat Activates</h3>
+        <p style="font-size:0.82rem;color:#a0d4ee;margin:0;line-height:1.5;">Your body's natural infrared energy activates the nanocrystals in the patch.</p>
+      </div>
+      <div style="background:linear-gradient(135deg,#1a1400,#2a2000);border:1px solid #7a6000;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden;text-align:center;">
+        <div style="position:absolute;top:0;right:0;width:60px;height:60px;background:#7a6000;border-radius:0 14px 0 60px;opacity:0.4;"></div>
+        <div style="font-size:1.8rem;margin-bottom:8px;">💡</div>
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f0c040;margin-bottom:4px;">Step 2</div>
+        <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">Light Is Reflected</h3>
+        <p style="font-size:0.82rem;color:#e0d090;margin:0;line-height:1.5;">Specific wavelengths are reflected back into the tissue at targeted acupressure points.</p>
+      </div>
+      <div style="background:linear-gradient(135deg,#1a0a2e,#280f40);border:1px solid #6a3d9e;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden;text-align:center;">
+        <div style="position:absolute;top:0;right:0;width:60px;height:60px;background:#6a3d9e;border-radius:0 14px 0 60px;opacity:0.4;"></div>
+        <div style="font-size:1.8rem;margin-bottom:8px;">⚡</div>
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#b07ee0;margin-bottom:4px;">Step 3</div>
+        <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">Body Responds</h3>
+        <p style="font-size:0.82rem;color:#d0b8f0;margin:0;line-height:1.5;">Your body's own systems are gently signalled — energy, recovery, and balance from within.</p>
+      </div>
+      <div style="background:linear-gradient(135deg,#0d1f0d,#163016);border:1px solid #2d6e2d;border-radius:14px;padding:20px 18px;position:relative;overflow:hidden;text-align:center;">
+        <div style="position:absolute;top:0;right:0;width:60px;height:60px;background:#2d6e2d;border-radius:0 14px 0 60px;opacity:0.4;"></div>
+        <div style="font-size:1.8rem;margin-bottom:8px;">✅</div>
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#5cb85c;margin-bottom:4px;">Always</div>
+        <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">Drug-Free</h3>
+        <p style="font-size:0.82rem;color:#a8d4a8;margin:0;line-height:1.5;">Nothing is absorbed. No chemicals, no stimulants, no prescriptions needed.</p>
+      </div>
+    </div>
+
+    <!-- HOW TO USE -->
+    <div style="background:var(--brand-light);border:1px solid #c0dce4;border-left:4px solid var(--brand-accent);border-radius:10px;padding:28px 32px;margin-bottom:40px;">
+      <h3 style="color:var(--brand-dark);font-family:'Trebuchet MS',sans-serif;margin-bottom:16px;font-size:1.1rem;">How to Use Your Patches</h3>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+        <li style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--brand-accent);font-weight:700;flex-shrink:0;">1.</span><span style="color:var(--text-body);">Apply the patch to clean, dry skin at the recommended acupressure point for your patch.</span></li>
+        <li style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--brand-accent);font-weight:700;flex-shrink:0;">2.</span><span style="color:var(--text-body);">Wear for <strong>12 hours on</strong>, then remove and allow <strong>12 hours off</strong> before applying a new patch. This rest period is important — it prevents your body from adapting and keeps the patches working effectively.</span></li>
+        <li style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--brand-accent);font-weight:700;flex-shrink:0;">3.</span><span style="color:var(--text-body);">Rotate the placement location daily to avoid skin sensitivity.</span></li>
+        <li style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--brand-accent);font-weight:700;flex-shrink:0;">4.</span><span style="color:var(--text-body);">Drink plenty of water — 4 to 5 ounces every 30 minutes helps your body respond optimally.</span></li>
+        <li style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--brand-accent);font-weight:700;flex-shrink:0;">5.</span><span style="color:var(--text-body);">Use daily for best results. Most people begin noticing changes within the first 1–4 weeks.</span></li>
+      </ul>
+      <p style="margin-top:16px;font-size:0.85rem;color:var(--text-muted);">Each patch in the LifeWave range includes specific placement guidance. Caroline is happy to walk you through it — <a href="mailto:etxladiesoflight@gmail.com" style="color:var(--brand-mid);">reach out any time</a>.</p>
+    </div>
+
     <!-- PATCH REFERENCE VISUAL -->
     <h2 class="mt-md" style="text-align:center;">The Lifewave Patch Collection</h2>
     <p class="lead-text" style="text-align:center; margin-bottom:32px;">
@@ -661,7 +734,7 @@
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#5b9bd5;margin-bottom:4px;">Flagship</div>
         <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">X39®</h3>
         <p style="font-size:0.82rem;color:#a8c4e0;margin:0;line-height:1.5;">Supports stem cell activation, energy, sleep quality, and whole-body wellness.</p>
-        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); return false;" style="font-size:0.78rem;color:#5b9bd5;text-decoration:none;">See details →</a></div>
+        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); document.getElementById('patch-x39').scrollIntoView({behavior:'smooth'}); return false;"="font-size:0.78rem;color:#5b9bd5;text-decoration:none;">See details →</a></div>
       </div>
 
       <!-- X49 -->
@@ -671,7 +744,7 @@
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#5cb85c;margin-bottom:4px;">Performance</div>
         <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">X49™</h3>
         <p style="font-size:0.82rem;color:#a8d4a8;margin:0;line-height:1.5;">Supports physical performance, cardiovascular health, and recovery from exercise.</p>
-        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); return false;" style="font-size:0.78rem;color:#5cb85c;text-decoration:none;">See details →</a></div>
+        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); document.getElementById('patch-x49').scrollIntoView({behavior:'smooth'}); return false;"="font-size:0.78rem;color:#5cb85c;text-decoration:none;">See details →</a></div>
       </div>
 
       <!-- Energy Enhancer -->
@@ -681,7 +754,7 @@
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f0c040;margin-bottom:4px;">Energy</div>
         <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">Energy Enhancer</h3>
         <p style="font-size:0.82rem;color:#e0d090;margin:0;line-height:1.5;">Non-stimulant support for natural energy flow. No caffeine, no crash.</p>
-        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); return false;" style="font-size:0.78rem;color:#f0c040;text-decoration:none;">See details →</a></div>
+        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); document.getElementById('patch-energy').scrollIntoView({behavior:'smooth'}); return false;"="font-size:0.78rem;color:#f0c040;text-decoration:none;">See details →</a></div>
       </div>
 
       <!-- IceWave -->
@@ -691,7 +764,7 @@
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#4db8e8;margin-bottom:4px;">Comfort</div>
         <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">IceWave™</h3>
         <p style="font-size:0.82rem;color:#a0d4ee;margin:0;line-height:1.5;">Drug-free support for everyday physical discomfort. Two-patch system.</p>
-        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); return false;" style="font-size:0.78rem;color:#4db8e8;text-decoration:none;">See details →</a></div>
+        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); document.getElementById('patch-icewave').scrollIntoView({behavior:'smooth'}); return false;"="font-size:0.78rem;color:#4db8e8;text-decoration:none;">See details →</a></div>
       </div>
 
       <!-- Y-Age Trio -->
@@ -701,7 +774,7 @@
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#b07ee0;margin-bottom:4px;">Longevity</div>
         <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">Y-Age Trio™</h3>
         <p style="font-size:0.82rem;color:#d0b8f0;margin:0;line-height:1.5;">Three patches working together: Aeon, Carnosine, and Glutathione for whole-body rejuvenation.</p>
-        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); return false;" style="font-size:0.78rem;color:#b07ee0;text-decoration:none;">See details →</a></div>
+        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); document.getElementById('patch-yage').scrollIntoView({behavior:'smooth'}); return false;"="font-size:0.78rem;color:#b07ee0;text-decoration:none;">See details →</a></div>
       </div>
 
       <!-- Alavida & Skin Care -->
@@ -711,7 +784,7 @@
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e090d0;margin-bottom:4px;">Beauty & Renewal</div>
         <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">Alavida™ & Skin Care</h3>
         <p style="font-size:0.82rem;color:#f0b8e8;margin:0;line-height:1.5;">Light-activated rejuvenation for skin health, pineal gland support, and natural radiance.</p>
-        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); return false;" style="font-size:0.78rem;color:#e090d0;text-decoration:none;">See details →</a></div>
+        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); document.getElementById('patch-alavida').scrollIntoView({behavior:'smooth'}); return false;"="font-size:0.78rem;color:#e090d0;text-decoration:none;">See details →</a></div>
       </div>
 
       <!-- SP6 Complete -->
@@ -721,7 +794,7 @@
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e060c0;margin-bottom:4px;">Appetite</div>
         <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">SP6 Complete™</h3>
         <p style="font-size:0.82rem;color:#f0b0e0;margin:0;line-height:1.5;">Supports healthy appetite control and digestive wellness to complement a balanced lifestyle.</p>
-        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); return false;" style="font-size:0.78rem;color:#e060c0;text-decoration:none;">See details →</a></div>
+        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); document.getElementById('patch-sp6').scrollIntoView({behavior:'smooth'}); return false;"="font-size:0.78rem;color:#e060c0;text-decoration:none;">See details →</a></div>
       </div>
 
       <!-- Silent Nights -->
@@ -731,7 +804,7 @@
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7090d0;margin-bottom:4px;">Sleep</div>
         <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">Silent Nights™</h3>
         <p style="font-size:0.82rem;color:#a8b8e0;margin:0;line-height:1.5;">Supports deeper, more restful sleep — naturally, without melatonin or sedatives.</p>
-        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); return false;" style="font-size:0.78rem;color:#7090d0;text-decoration:none;">See details →</a></div>
+        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); document.getElementById('patch-silent').scrollIntoView({behavior:'smooth'}); return false;"="font-size:0.78rem;color:#7090d0;text-decoration:none;">See details →</a></div>
       </div>
 
       <!-- Acculife for Animals -->
@@ -741,7 +814,7 @@
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#80c050;margin-bottom:4px;">For Your Pet</div>
         <h3 style="font-size:1rem;color:#ffffff;margin:0 0 8px;">Acculife™</h3>
         <p style="font-size:0.82rem;color:#b8e090;margin:0;line-height:1.5;">Phototherapy for animals — drug-free support for your pet's comfort, energy, and vitality.</p>
-        <div style="margin-top:12px;"><a href="#" onclick="showTab('products'); return false;" style="font-size:0.78rem;color:#80c050;text-decoration:none;">See details →</a></div>
+        <div style="margin-top:12px;"><a href="#" onclick="showTab('animals'); return false;"="font-size:0.78rem;color:#80c050;text-decoration:none;">See details →</a></div>
       </div>
 
     </div>
@@ -750,28 +823,28 @@
       <a href="#" onclick="showTab('products'); return false;" style="color:var(--brand-light);">View full product details and shop links →</a>
     </p>
 
-<!-- TESTIMONIALS (placeholder — replace with real ones) -->
+<!-- TESTIMONIALS -->
     <h2 class="mt-md">What People Are Saying</h2>
-    <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom: 18px;">
-      ✏️ <em>Replace these placeholders with real testimonials from your customers — no medical claims, first name and product used only.</em>
-    </p>
     <div class="testimonials">
       <div class="testimonial">
         <div class="stars">★★★★★</div>
-        <blockquote>"I was really sceptical at first — patches seemed too simple. But after a few weeks with X39® I genuinely noticed a difference in my energy levels."</blockquote>
-        <cite>Sarah M. — X39®</cite>
+        <blockquote>"I have been using X39 for several months now. I feel so much better and more energetic. I am sleeping better and recovering faster. I am so grateful!"</blockquote>
+        <cite>Marci — X39®</cite>
       </div>
       <div class="testimonial">
         <div class="stars">★★★★★</div>
-        <blockquote>"IceWave has become part of my daily routine. I love that there are no tablets involved — it just sits there quietly doing its thing."</blockquote>
-        <cite>James T. — IceWave™</cite>
+        <blockquote>"IceWave has been a total game changer for me. I use it every day and I honestly don't know what I would do without it at this point."</blockquote>
+        <cite>Hannah — IceWave™</cite>
       </div>
       <div class="testimonial">
         <div class="stars">★★★★★</div>
-        <blockquote>"I was looking for something to help me feel more myself again. X39® has been part of that — I feel more balanced and I sleep much better."</blockquote>
-        <cite>Linda K. — X39®</cite>
+        <blockquote>"I was skeptical but I am so glad I tried X39. My energy is up, I feel younger, and people keep telling me I look great. Love this product!"</blockquote>
+        <cite>Kathy — X39®</cite>
       </div>
     </div>
+    <p style="text-align:center; margin-top: 18px;">
+      <a href="https://www.youtube.com/playlist?list=PLDrNwq4whtK47y6qCGD0sxlhecH_ggrTY" target="_blank" rel="noopener" style="color:var(--brand-light); font-weight:600; font-size:1rem;">▶ For more testimonies click here</a>
+    </p>
 
     <div class="disclaimer">
       These statements have not been evaluated by the Food and Drug Administration.
@@ -813,111 +886,72 @@
 <!-- ═══════════════════════════════════════════
      TAB: HOW IT WORKS
 ══════════════════════════════════════════════ -->
-<div class="section-panel" id="tab-how-it-works">
+<div class="section-panel" id="tab-animals">
   <div class="container">
-
-    <h2>How Lifewave Phototherapy Works</h2>
+    <h2>LifeWave for the Animals You Love</h2>
     <p class="lead-text">
-      Lifewave patches use a process called <strong>photobiomodulation</strong> — the use
-      of light to influence biological processes in the body. It's been studied for decades
-      and forms the basis of Lifewave's entire product range.
+      The same drug-free, needle-free phototherapy technology trusted by thousands of people —
+      now available to support your horses and dogs. No prescriptions. Nothing enters their body.
+      Just gentle, natural wellness support.
     </p>
 
-    <h3>The Simple Explanation</h3>
-    <p>
-      Your body naturally produces heat, which emits infrared light. Lifewave patches
-      contain a layer of organic crystals that are designed to capture that infrared energy
-      and reflect specific wavelengths back into your skin.
-    </p>
-    <p>
-      This reflected light signal is designed to trigger certain responses in your body —
-      responses your body is naturally capable of — without adding any substance to your
-      system. No drugs. No supplements. Nothing enters your bloodstream.
-    </p>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h4>Apply the patch</h4>
-        <p>Place the patch on the designated acupuncture point on your skin. It's gentle — like a small sticker.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h4>Your body provides the energy</h4>
-        <p>Your own body heat activates the patch. No batteries, no technology beyond the patch itself.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h4>Reflected light does the work</h4>
-        <p>The organic crystals in the patch reflect specific light frequencies back into your skin.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h4>Your body responds naturally</h4>
-        <p>The light signal is designed to support processes your body is already capable of — from within.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">5</div>
-        <h4>Wear for up to 12 hours</h4>
-        <p>Most patches are worn for up to 12 hours, then removed. Simple to fit into any routine.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">6</div>
-        <h4>Consistency builds results</h4>
-        <p>Like most wellness practices, the best results come with regular, consistent use over time.</p>
-      </div>
-    </div>
-
-    <h3>What Makes This Different</h3>
-    <ul>
-      <li>Nothing enters your body — non-transdermal by design</li>
-      <li>No drugs, no stimulants, no supplements</li>
-      <li>Worn externally on the skin for up to 12 hours</li>
-      <li>Removes cleanly — no residue or lasting adhesive</li>
-      <li>Can be worn during normal daily activities</li>
-      <li>Based on 20+ years of phototherapy research and development</li>
-    </ul>
-
-    <h3>The X39® Mechanism: GHK-Cu Peptide Elevation</h3>
-    <p>
-      Lifewave's flagship product, X39®, works by elevating a naturally occurring peptide
-      in the body called <strong>GHK-Cu</strong>. This compound tends to decline with age,
-      and research suggests it plays a role in cellular repair, energy regulation, and vitality.
-    </p>
-    <p>
-      X39® uses phototherapy to encourage your body's own production of GHK-Cu — using
-      light, not chemistry. Clinical research on this mechanism forms part of Lifewave's
-      published science portfolio.
-    </p>
-
-    <div class="highlight-box">
+    <!-- Horses -->
+    <div class="highlight-box mt-md" style="border-left-color: var(--brand-mid);">
+      <div class="product-badge">Horses</div>
+      <h3 style="margin-top:8px;color:var(--brand-dark);">AcuLife® — Drug-Free Wellness for Horses</h3>
       <p>
-        <strong>Want to go deeper?</strong> Lifewave has published clinical research and peer-reviewed
-        studies on the photobiomodulation technology behind their patches.
-        <a href="https://lifewave.com/carolinewhitton/home/the-science" target="_blank">Explore the science here →</a>
-        Or <a href="#" onclick="showTab('contact'); return false;">get in touch</a> and I'm happy to share links to specific studies.
+        AcuLife® patches are placed on acupressure points on your horse's body, using reflected light
+        to gently stimulate natural energy pathways. Recognised as a valid modality by the
+        <strong>AVMA</strong> and <strong>AAEP</strong>. A clinical study of 53 horses showed
+        pain reduction with statistical significance of <strong>p &lt; 0.0001</strong>.
       </p>
+      <ul>
+        <li>Temporary relief from soreness and discomfort</li>
+        <li>Supports healthy inflammation response</li>
+        <li>Drug-free, needle-free — no prescription needed</li>
+        <li>Works for up to 12 hours per application</li>
+      </ul>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;">
+        <a href="https://lifewave.com/carolinewhitton/store/product/30001.022.001" target="_blank" class="cta-btn cta-primary">Shop AcuLife® →</a>
+        <a href="animals.html#horses" class="cta-btn cta-secondary">Learn More</a>
+      </div>
     </div>
 
-    <div class="disclaimer">
-      These statements have not been evaluated by the Food and Drug Administration.
-      This product is not intended to diagnose, treat, cure, or prevent any disease.
-      Individual results may vary.
+    <!-- Dogs -->
+    <div class="highlight-box" style="border-left-color: #c9a84c; margin-top:20px;">
+      <div class="product-badge" style="background:#c9a84c;color:var(--brand-dark);">Dogs &amp; Pets</div>
+      <h3 style="margin-top:8px;color:var(--brand-dark);">X39® &amp; AcuLife® for Dogs</h3>
+      <p>
+        LifeWave patches can be used on dogs to support comfort, calm, and recovery — especially
+        for older dogs with stiffness or dogs recovering from activity. Nothing is absorbed into
+        their body. No side effects. Just the same gentle phototherapy your pets deserve.
+      </p>
+      <ul>
+        <li>Supports joint comfort in older or active dogs</li>
+        <li>Helps promote calm and relaxation</li>
+        <li>Supports natural recovery after exercise</li>
+        <li>Completely drug-free and non-invasive</li>
+      </ul>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;">
+        <a href="https://lifewave.com/carolinewhitton/store/product/39000.022.009" target="_blank" class="cta-btn cta-primary">Shop X39® →</a>
+        <a href="https://lifewave.com/carolinewhitton/store/product/30001.022.001" target="_blank" class="cta-btn cta-primary">Shop AcuLife® →</a>
+        <a href="animals.html#dogs" class="cta-btn cta-secondary">Learn More</a>
+      </div>
     </div>
 
-    <div class="shop-banner">
-      <h3>Curious to Try?</h3>
-      <p>All patches are available directly through my Lifewave partner shop. Secure ordering, shipped by Lifewave.</p>
-      <a href="https://lifewave.com/carolinewhitton/store/products" target="_blank" class="cta-btn cta-primary">Browse the Patches →</a>
+    <!-- Research callout -->
+    <div style="background:var(--brand-dark);color:#fff;border-radius:10px;padding:28px;margin-top:28px;text-align:center;">
+      <p style="font-size:0.9rem;color:rgba(255,255,255,0.75);margin-bottom:10px;">PEER-REVIEWED RESEARCH</p>
+      <p style="font-size:1.05rem;color:#fff;max-width:580px;margin:0 auto 18px;">
+        LifeWave has conducted clinical studies on AcuLife in horses — read the science behind the patches.
+      </p>
+      <a href="https://lifewave.com/Content/images/home/science/pdf/Research-AcuLifePatches.pdf" target="_blank" style="color:var(--brand-accent);font-family:'Trebuchet MS',sans-serif;font-weight:700;font-size:0.92rem;">📄 Read the Clinical Study (PDF) →</a>
     </div>
 
   </div>
-</div><!-- end tab-how-it-works -->
+</div>
 
 
-<!-- ═══════════════════════════════════════════
-     TAB: THE PATCHES
-══════════════════════════════════════════════ -->
 <div class="section-panel" id="tab-products">
   <div class="container">
 
@@ -928,167 +962,176 @@
     </p>
 
 <!-- X39 -->
-    <div class="highlight-box mt-md" style="border-left-color: var(--brand-mid);">
-      <div class="product-badge">Flagship product</div>
-      <h3 style="margin-top: 8px; color: var(--brand-dark);">X39® — Whole-Body Wellness, Naturally Activated</h3>
-      <p>
+    <div id="patch-x39" style="background:linear-gradient(135deg,#0a1628,#0f2240);border:1px solid #1e4d8c;border-radius:14px;padding:24px 28px;margin:24px 0;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:70px;height:70px;background:#1e4d8c;border-radius:0 14px 0 70px;opacity:0.4;"></div>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#5b9bd5;margin-bottom:6px;">Flagship Product</div>
+      <h3 style="margin-top:0;color:#ffffff;">X39® — Whole-Body Wellness, Naturally Activated</h3>
+      <p style="color:#a8c4e0;margin-bottom:10px;">
         There's a reason X39® is Lifewave's best-selling patch. It's designed to elevate a
         naturally occurring peptide called GHK-Cu — a compound associated with healthy
         cellular function, energy, and vitality. As we age, GHK-Cu declines; X39® is
         designed to support its natural restoration.
       </p>
-      <p><strong>Designed to support:</strong></p>
-      <ul>
-        <li>Improved energy levels and daily vitality</li>
-        <li>Better quality sleep</li>
-        <li>Faster recovery from physical activity</li>
-        <li>Overall whole-body wellness and balance</li>
+      <p style="color:#a8c4e0;"><strong style="color:#ffffff;">Designed to support:</strong></p>
+      <ul style="color:#a8c4e0;padding-left:20px;margin:8px 0;">
+        <li style="margin-bottom:6px;color:#e8f4ff;">Improved energy levels and daily vitality</li>
+        <li style="margin-bottom:6px;color:#e8f4ff;">Better quality sleep</li>
+        <li style="margin-bottom:6px;color:#e8f4ff;">Faster recovery from physical activity</li>
+        <li style="margin-bottom:6px;color:#e8f4ff;">Overall whole-body wellness and balance</li>
       </ul>
       <a href="https://lifewave.com/carolinewhitton/store/products/40825027-6466-4cb8-92d3-dfc318d34a65" target="_blank" class="cta-btn cta-primary" style="margin-top: 10px;">Shop X39® →</a>
     </div>
 
     <!-- X49 -->
-    <div class="highlight-box" style="border-left-color: #5a9e8c; margin-top: 20px;">
-      <div class="product-badge" style="background: #5a9e8c;">Performance</div>
-      <h3 style="margin-top: 8px; color: var(--brand-dark);">X49™ — Strength, Stamina & Recovery</h3>
-      <p>
+    <div id="patch-x49" style="background:linear-gradient(135deg,#0d1f0d,#163016);border:1px solid #2d6e2d;border-radius:14px;padding:24px 28px;margin:24px 0;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:70px;height:70px;background:#2d6e2d;border-radius:0 14px 0 70px;opacity:0.4;"></div>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#5cb85c;margin-bottom:6px;">Performance</div>
+      <h3 style="margin-top:0;color:#ffffff;">X49™ — Strength, Stamina &amp; Recovery</h3>
+      <p style="color:#a8d4a8;margin-bottom:10px;">
         X49™ is designed for people who want to support physical performance and healthy
         body composition. Clinical research has shown significant improvements in exercise
         performance in men aged 40–81 using X49™ alongside a structured programme.
       </p>
-      <ul>
-        <li>Supports improved strength and stamina</li>
-        <li>Supports healthy cardiovascular function</li>
-        <li>Supports faster recovery after exercise</li>
-        <li>Helps maintain healthy body composition with diet and exercise</li>
-        <li>Works synergistically with X39®</li>
+      <ul style="color:#a8d4a8;padding-left:20px;margin:8px 0;">
+        <li style="margin-bottom:6px;color:#e0f5e0;">Supports improved strength and stamina</li>
+        <li style="margin-bottom:6px;color:#e0f5e0;">Supports healthy cardiovascular function</li>
+        <li style="margin-bottom:6px;color:#e0f5e0;">Supports faster recovery after exercise</li>
+        <li style="margin-bottom:6px;color:#e0f5e0;">Helps maintain healthy body composition with diet and exercise</li>
+        <li style="margin-bottom:6px;color:#e0f5e0;">Works synergistically with X39®</li>
       </ul>
       <a href="https://lifewave.com/carolinewhitton/store/products/45b6cac6-345c-49d9-836c-8f665e532f47" target="_blank" class="cta-btn cta-primary" style="margin-top: 10px;">Shop X49™ →</a>
     </div>
 
     <!-- Energy Enhancer -->
-    <div class="highlight-box" style="border-left-color: #c9a84c; margin-top: 20px;">
-      <div class="product-badge" style="background: #c9a84c; color: var(--brand-dark);">Energy</div>
-      <h3 style="margin-top: 8px; color: var(--brand-dark);">Energy Enhancer — Natural, Non-Stimulant Vitality</h3>
-      <p>
+    <div id="patch-energy" style="background:linear-gradient(135deg,#1a1400,#2a2000);border:1px solid #7a6000;border-radius:14px;padding:24px 28px;margin:24px 0;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:70px;height:70px;background:#7a6000;border-radius:0 14px 0 70px;opacity:0.4;"></div>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f0c040;margin-bottom:6px;">Energy</div>
+      <h3 style="margin-top:0;color:#ffffff;">Energy Enhancer — Natural, Non-Stimulant Vitality</h3>
+      <p style="color:#e0d090;margin-bottom:10px;">
         The Energy Enhancer is a popular starting point for people new to Lifewave patches.
         It's designed to support your body's natural energy flow — without caffeine, without
         stimulants, and without a crash later in the day.
       </p>
-      <ul>
-        <li>Supports improved energy flow throughout the body</li>
-        <li>Great for everyday vitality and active recovery</li>
-        <li>Non-stimulant — no caffeine or synthetic ingredients</li>
-        <li>Often used alongside X39® for a complementary effect</li>
+      <ul style="color:#e0d090;padding-left:20px;margin:8px 0;">
+        <li style="margin-bottom:6px;color:#fff5cc;">Supports improved energy flow throughout the body</li>
+        <li style="margin-bottom:6px;color:#fff5cc;">Great for everyday vitality and active recovery</li>
+        <li style="margin-bottom:6px;color:#fff5cc;">Non-stimulant — no caffeine or synthetic ingredients</li>
+        <li style="margin-bottom:6px;color:#fff5cc;">Often used alongside X39® for a complementary effect</li>
       </ul>
       <a href="https://lifewave.com/carolinewhitton/store/product/31001.022.001" target="_blank" class="cta-btn cta-primary" style="margin-top: 10px;">Shop Energy Enhancer →</a>
     </div>
 
     <!-- IceWave -->
-    <div class="highlight-box" style="border-left-color: #7ab8c8; margin-top: 20px;">
-      <div class="product-badge" style="background: #7ab8c8;">For comfort</div>
-      <h3 style="margin-top: 8px; color: var(--brand-dark);">IceWave™ — Drug-Free Everyday Comfort</h3>
-      <p>
+    <div id="patch-icewave" style="background:linear-gradient(135deg,#071a2e,#0a2540);border:1px solid #1a6b9e;border-radius:14px;padding:24px 28px;margin:24px 0;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:70px;height:70px;background:#1a6b9e;border-radius:0 14px 0 70px;opacity:0.4;"></div>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#4db8e8;margin-bottom:6px;">For Comfort</div>
+      <h3 style="margin-top:0;color:#ffffff;">IceWave™ — Drug-Free Everyday Comfort</h3>
+      <p style="color:#a0d4ee;margin-bottom:10px;">
         IceWave™ uses a two-patch system — one white, one tan — placed near the area of
         everyday physical discomfort. It's a completely drug-free, non-invasive approach
         to comfort support that fits easily into any lifestyle.
       </p>
-      <ul>
-        <li>Supports relief from everyday physical discomfort</li>
-        <li>Drug-free and non-invasive</li>
-        <li>Supports an active lifestyle and mobility</li>
-        <li>No tablets, nothing systemic</li>
+      <ul style="color:#a0d4ee;padding-left:20px;margin:8px 0;">
+        <li style="margin-bottom:6px;color:#e0f4ff;">Supports relief from everyday physical discomfort</li>
+        <li style="margin-bottom:6px;color:#e0f4ff;">Drug-free and non-invasive</li>
+        <li style="margin-bottom:6px;color:#e0f4ff;">Supports an active lifestyle and mobility</li>
+        <li style="margin-bottom:6px;color:#e0f4ff;">No tablets, nothing systemic</li>
       </ul>
       <a href="https://lifewave.com/carolinewhitton/store/product/34001.022.001" target="_blank" class="cta-btn cta-primary" style="margin-top: 10px;">Shop IceWave™ →</a>
     </div>
 
     <!-- Y-Age Trio -->
-    <div class="highlight-box" style="border-left-color: #9b7bb8; margin-top: 20px;">
-      <div class="product-badge" style="background: #9b7bb8;">Longevity</div>
-      <h3 style="margin-top: 8px; color: var(--brand-dark);">Y-Age Trio — Advanced Longevity Support</h3>
-      <p>
+    <div id="patch-yage" style="background:linear-gradient(135deg,#1a0a2e,#280f40);border:1px solid #6a3d9e;border-radius:14px;padding:24px 28px;margin:24px 0;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:70px;height:70px;background:#6a3d9e;border-radius:0 14px 0 70px;opacity:0.4;"></div>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#b07ee0;margin-bottom:6px;">Longevity</div>
+      <h3 style="margin-top:0;color:#ffffff;">Y-Age Trio — Advanced Longevity Support</h3>
+      <p style="color:#d0b8f0;margin-bottom:10px;">
         The Y-Age Trio combines three of Lifewave's most powerful longevity patches — Aeon, Carnosine,
         and Glutathione — each designed to support the body's natural anti-ageing processes through
         photobiomodulation technology.
       </p>
-      <ul>
-        <li><strong>Aeon</strong> — supports stress reduction and healthy inflammatory response</li>
-        <li><strong>Carnosine</strong> — supports whole-body rejuvenation and cellular health</li>
-        <li><strong>Glutathione</strong> — supports the body's master antioxidant and detoxification</li>
-        <li>Often used alongside X39® as part of a complete wellness protocol</li>
+      <ul style="color:#d0b8f0;padding-left:20px;margin:8px 0;">
+        <li style="margin-bottom:6px;color:#f0e8ff;"><strong>Aeon</strong> — supports stress reduction and healthy inflammatory response</li>
+        <li style="margin-bottom:6px;color:#f0e8ff;"><strong>Carnosine</strong> — supports whole-body rejuvenation and cellular health</li>
+        <li style="margin-bottom:6px;color:#f0e8ff;"><strong>Glutathione</strong> — supports the body's master antioxidant and detoxification</li>
+        <li style="margin-bottom:6px;color:#f0e8ff;">Often used alongside X39® as part of a complete wellness protocol</li>
       </ul>
       <a href="https://lifewave.com/carolinewhitton/store/products/12086f4e-45ad-439c-b4e6-f37553562ff3" target="_blank" class="cta-btn cta-primary" style="margin-top: 10px;">Shop Y-Age Trio →</a>
     </div>
 
     <!-- Alavida & Skin Care -->
-    <div class="highlight-box" style="border-left-color: #c9a0c0; margin-top: 20px;">
-      <div class="product-badge" style="background: #c9a0c0;">Beauty & Renewal</div>
-      <h3 style="margin-top: 8px; color: var(--brand-dark);">Alavida™ Patch & Skin Care — Light-Activated Beauty</h3>
-      <p>
+    <div id="patch-alavida" style="background:linear-gradient(135deg,#1a0818,#2a1028);border:1px solid #9b3d8e;border-radius:14px;padding:24px 28px;margin:24px 0;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:70px;height:70px;background:#9b3d8e;border-radius:0 14px 0 70px;opacity:0.4;"></div>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e090d0;margin-bottom:6px;">Beauty & Renewal</div>
+      <h3 style="margin-top:0;color:#ffffff;">Alavida™ Patch & Skin Care — Light-Activated Beauty</h3>
+      <p style="color:#f0b8e8;margin-bottom:10px;">
         Alavida™ is Lifewave's dedicated rejuvenation patch — designed to support the pineal gland,
         encourage healthy melatonin regulation, and promote a more youthful complexion from within.
         Paired with the LifeWave Skin Care range, it brings the same photobiomodulation science
         to your daily skin routine.
       </p>
-      <p><strong>Designed to support:</strong></p>
-      <ul>
-        <li>Skin renewal and a more youthful appearance</li>
-        <li>Healthy sleep-cycle regulation via pineal gland support</li>
-        <li>Antioxidant defence and cellular rejuvenation</li>
-        <li>Works with the body's own biology — no harsh chemicals</li>
+      <p style="color:#f0b8e8;"><strong style="color:#ffffff;">Designed to support:</strong></p>
+      <ul style="color:#f0b8e8;padding-left:20px;margin:8px 0;">
+        <li style="margin-bottom:6px;color:#ffe8f8;">Skin renewal and a more youthful appearance</li>
+        <li style="margin-bottom:6px;color:#ffe8f8;">Healthy sleep-cycle regulation via pineal gland support</li>
+        <li style="margin-bottom:6px;color:#ffe8f8;">Antioxidant defence and cellular rejuvenation</li>
+        <li style="margin-bottom:6px;color:#ffe8f8;">Works with the body's own biology — no harsh chemicals</li>
       </ul>
       <a href="https://lifewave.com/carolinewhitton/store/products/fc868568-0d4a-48e6-8d61-5cb4f548ba44" target="_blank" class="cta-btn cta-primary" style="margin-top: 10px;">Shop Alavida & Skin Care →</a>
     </div>
 
     <!-- SP6 Complete -->
-    <div class="highlight-box" style="border-left-color: #c060a0; margin-top: 20px;">
-      <div class="product-badge" style="background: #c060a0;">Appetite & Balance</div>
-      <h3 style="margin-top: 8px; color: var(--brand-dark);">SP6 Complete™ — Healthy Appetite Support</h3>
-      <p>
+    <div id="patch-sp6" style="background:linear-gradient(135deg,#1a0818,#280c24);border:1px solid #8b1a6b;border-radius:14px;padding:24px 28px;margin:24px 0;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:70px;height:70px;background:#8b1a6b;border-radius:0 14px 0 70px;opacity:0.4;"></div>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e060c0;margin-bottom:6px;">Appetite & Balance</div>
+      <h3 style="margin-top:0;color:#ffffff;">SP6 Complete™ — Healthy Appetite Support</h3>
+      <p style="color:#f0b0e0;margin-bottom:10px;">
         SP6 Complete™ is designed to support healthy appetite control and digestive wellness —
         a natural complement to a balanced lifestyle and healthy eating habits.
       </p>
-      <p><strong>Designed to support:</strong></p>
-      <ul>
-        <li>Healthy appetite and craving management</li>
-        <li>Digestive wellness and gut comfort</li>
-        <li>Complements a balanced, healthy lifestyle</li>
+      <p style="color:#f0b0e0;"><strong style="color:#ffffff;">Designed to support:</strong></p>
+      <ul style="color:#f0b0e0;padding-left:20px;margin:8px 0;">
+        <li style="margin-bottom:6px;color:#ffe0f5;">Healthy appetite and craving management</li>
+        <li style="margin-bottom:6px;color:#ffe0f5;">Digestive wellness and gut comfort</li>
+        <li style="margin-bottom:6px;color:#ffe0f5;">Complements a balanced, healthy lifestyle</li>
       </ul>
       <a href="https://lifewave.com/carolinewhitton/store/product/38001.022.001" target="_blank" class="cta-btn cta-primary" style="margin-top: 10px;">Shop SP6 Complete™ →</a>
     </div>
 
     <!-- Silent Nights -->
-    <div class="highlight-box" style="border-left-color: #3a5a9e; margin-top: 20px;">
-      <div class="product-badge" style="background: #3a5a9e;">Sleep</div>
-      <h3 style="margin-top: 8px; color: var(--brand-dark);">Silent Nights™ — Deeper, More Restful Sleep</h3>
-      <p>
+    <div id="patch-silent" style="background:linear-gradient(135deg,#05101e,#0a1830);border:1px solid #1a3a6e;border-radius:14px;padding:24px 28px;margin:24px 0;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:70px;height:70px;background:#1a3a6e;border-radius:0 14px 0 70px;opacity:0.4;"></div>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7090d0;margin-bottom:6px;">Sleep</div>
+      <h3 style="margin-top:0;color:#ffffff;">Silent Nights™ — Deeper, More Restful Sleep</h3>
+      <p style="color:#a8b8e0;margin-bottom:10px;">
         Silent Nights™ supports deeper, more restful sleep — naturally, without melatonin,
         sedatives, or anything entering the body. Simply apply before bed and let light-activated
         technology do the rest.
       </p>
-      <p><strong>Designed to support:</strong></p>
-      <ul>
-        <li>Faster sleep onset and deeper sleep cycles</li>
-        <li>Waking feeling more refreshed and rested</li>
-        <li>Drug-free, non-habit-forming sleep support</li>
+      <p style="color:#a8b8e0;"><strong style="color:#ffffff;">Designed to support:</strong></p>
+      <ul style="color:#a8b8e0;padding-left:20px;margin:8px 0;">
+        <li style="margin-bottom:6px;color:#e8eeff;">Faster sleep onset and deeper sleep cycles</li>
+        <li style="margin-bottom:6px;color:#e8eeff;">Waking feeling more refreshed and rested</li>
+        <li style="margin-bottom:6px;color:#e8eeff;">Drug-free, non-habit-forming sleep support</li>
       </ul>
       <a href="https://lifewave.com/carolinewhitton/store/product/32001.022.001" target="_blank" class="cta-btn cta-primary" style="margin-top: 10px;">Shop Silent Nights™ →</a>
     </div>
 
     <!-- Acculife for Animals -->
-    <div class="highlight-box" style="border-left-color: #7a9e4a; margin-top: 20px;">
-      <div class="product-badge" style="background: #7a9e4a;">For Your Pet</div>
-      <h3 style="margin-top: 8px; color: var(--brand-dark);">Acculife™ — Phototherapy for Animals</h3>
-      <p>
+    <div id="patch-aculife" style="background:linear-gradient(135deg,#0d1a08,#162808);border:1px solid #4a8e2a;border-radius:14px;padding:24px 28px;margin:24px 0;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;right:0;width:70px;height:70px;background:#4a8e2a;border-radius:0 14px 0 70px;opacity:0.4;"></div>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#80c050;margin-bottom:6px;">For Your Pet</div>
+      <h3 style="margin-top:0;color:#ffffff;">Acculife™ — Phototherapy for Animals</h3>
+      <p style="color:#b8e090;margin-bottom:10px;">
         The same light-activated technology, designed for your pets. Acculife™ uses
         photobiomodulation to support your animal companion's comfort, energy, and vitality —
         no drugs, no chemicals, nothing absorbed through the skin.
       </p>
-      <p><strong>Designed to support:</strong></p>
-      <ul>
-        <li>Animal comfort and everyday vitality</li>
-        <li>Active and ageing pets alike</li>
-        <li>Drug-free wellness for dogs, cats, and horses</li>
+      <p style="color:#b8e090;"><strong style="color:#ffffff;">Designed to support:</strong></p>
+      <ul style="color:#b8e090;padding-left:20px;margin:8px 0;">
+        <li style="margin-bottom:6px;color:#eaffd0;">Animal comfort and everyday vitality</li>
+        <li style="margin-bottom:6px;color:#eaffd0;">Active and ageing pets alike</li>
+        <li style="margin-bottom:6px;color:#eaffd0;">Drug-free wellness for dogs, cats, and horses</li>
       </ul>
       <a href="https://lifewave.com/carolinewhitton/store/product/30001.022.001" target="_blank" class="cta-btn cta-primary" style="margin-top: 10px;">Shop Acculife™ →</a>
     </div>
@@ -1465,7 +1508,7 @@
 <script>
   const TABS = {
     'home':         'tab-home',
-    'how-it-works': 'tab-how-it-works',
+    'animals':       'tab-animals',
     'products':     'tab-products',
     'about':        'tab-about',
     'faq':          'tab-faq',
@@ -1500,7 +1543,24 @@
       window.scrollTo({ top: offset, behavior: 'smooth' });
     }
   }
+
+  // Handle ?tab= parameter from external links (e.g. x2o.html)
+  window.addEventListener('load', function() {
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get('tab');
+    if (tab) {
+      showTab(tab);
+      const hash = window.location.hash.replace('#','');
+      if (hash) {
+        setTimeout(function() {
+          const el = document.getElementById(hash);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 500);
+      }
+    }
+  });
 </script>
 
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                      
