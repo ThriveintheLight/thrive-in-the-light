@@ -107,59 +107,260 @@
     .hero {
       background: #050e1c;
       color: var(--white);
-      padding: 72px 20px 60px;
-      text-align: center;
+      padding: 0;
       position: relative;
+      overflow: hidden;
+      min-height: clamp(520px, 80vh, 760px);
+      display: flex;
+      align-items: center;
     }
+
+    /* Animated light rays from top-right */
     .hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(145deg, rgba(26,46,59,0.55) 0%, rgba(46,107,122,0.35) 100%);
+      background:
+        radial-gradient(ellipse 80% 60% at 75% -10%, rgba(201,168,76,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 85% 50%, rgba(46,107,122,0.22) 0%, transparent 55%),
+        radial-gradient(ellipse 100% 40% at 50% 110%, rgba(5,20,50,0.9) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Subtle scanning light sweep */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 60%;
+      height: 200%;
+      background: linear-gradient(105deg, transparent 40%, rgba(201,168,76,0.04) 50%, transparent 60%);
+      animation: heroSweep 8s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @keyframes heroSweep {
+      0%   { transform: translateX(-30%) skewX(-10deg); opacity: 0; }
+      20%  { opacity: 1; }
+      80%  { opacity: 1; }
+      100% { transform: translateX(180%) skewX(-10deg); opacity: 0; }
+    }
+
+    /* Glowing orb — the "patch energy" visual */
+    .hero-orb {
+      position: absolute;
+      top: 50%;
+      right: -80px;
+      transform: translateY(-50%);
+      width: clamp(280px, 40vw, 520px);
+      height: clamp(280px, 40vw, 520px);
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%,
+        rgba(201,168,76,0.22) 0%,
+        rgba(46,107,122,0.18) 30%,
+        rgba(14,50,80,0.12) 60%,
+        transparent 75%
+      );
+      box-shadow:
+        inset 0 0 60px rgba(201,168,76,0.12),
+        0 0 80px rgba(46,107,122,0.15),
+        0 0 160px rgba(201,168,76,0.08);
+      animation: orbPulse 6s ease-in-out infinite;
+      z-index: 1;
       pointer-events: none;
     }
-    .hero .container { position: relative; z-index: 1; }
+    .hero-orb::after {
+      content: '';
+      position: absolute;
+      inset: 12%;
+      border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.2);
+      animation: orbRing 6s ease-in-out infinite reverse;
+    }
+    @keyframes orbPulse {
+      0%, 100% { transform: translateY(-50%) scale(1); opacity: 0.8; }
+      50%       { transform: translateY(-50%) scale(1.06); opacity: 1; }
+    }
+    @keyframes orbRing {
+      0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+      50%       { transform: scale(1.08) rotate(180deg); opacity: 1; }
+    }
+
+    /* Dot-grid texture overlay */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 32px 32px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      padding: 80px 20px 72px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Eyebrow label */
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Trebuchet MS', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #4db8e8;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: heroFadeUp 0.7s ease forwards 0.1s;
+    }
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: rgba(77,184,232,0.5);
+    }
+
+    /* Main headline — split large/gold treatment */
     .hero h1 {
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      line-height: 1.25;
-      margin-bottom: 20px;
+      font-family: 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif;
+      font-size: clamp(2.4rem, 6.5vw, 4.2rem);
+      line-height: 1.1;
       font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 0;
+      opacity: 0;
+      animation: heroFadeUp 0.7s ease forwards 0.25s;
     }
-    .hero h1 em {
-      color: var(--brand-accent);
-      font-style: normal;
+    .hero h1 .line-white {
+      display: block;
+      color: #ffffff;
     }
-    .hero p {
-      font-size: clamp(1rem, 2.5vw, 1.15rem);
-      max-width: 640px;
-      margin: 0 auto 32px;
-      opacity: 0.92;
-      line-height: 1.65;
+    .hero h1 .line-gold {
+      display: block;
+      background: linear-gradient(95deg, #c9a84c 0%, #f0d07a 45%, #c9a84c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-style: italic;
     }
-    .hero-buttons {
+
+    /* Divider line under headline */
+    .hero-divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, #c9a84c, transparent);
+      margin: 28px 0;
+      opacity: 0;
+      animation: heroFadeUp 0.7s ease forwards 0.4s;
+    }
+
+    .hero-sub {
+      font-family: Georgia, serif;
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
+      max-width: 520px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 44px;
+      opacity: 0;
+      animation: heroFadeUp 0.7s ease forwards 0.55s;
+    }
+
+    /* Wide banner CTAs — not pills */
+    .hero-ctas {
       display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 420px;
+      opacity: 0;
+      animation: heroFadeUp 0.7s ease forwards 0.7s;
     }
     .cta-btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 30px;
+      display: block;
+      width: 100%;
+      padding: 16px 28px;
+      font-family: 'Trebuchet MS', sans-serif;
       font-weight: 700;
       font-size: 0.95rem;
-      transition: transform 0.15s, opacity 0.15s;
+      letter-spacing: 0.5px;
+      text-align: center;
+      border-radius: 6px;
       cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+      text-decoration: none;
     }
-    .cta-btn:hover { transform: translateY(-2px); opacity: 0.9; text-decoration: none; }
+    .cta-btn:hover { transform: translateY(-2px); text-decoration: none; }
     .cta-primary {
-      background: var(--brand-accent);
-      color: var(--brand-dark);
+      background: linear-gradient(135deg, #c9a84c 0%, #f0d07a 50%, #c9a84c 100%);
+      background-size: 200% auto;
+      color: #0a1a28;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+      transition: background-position 0.4s, transform 0.15s, box-shadow 0.15s;
+    }
+    .cta-primary:hover {
+      background-position: right center;
+      box-shadow: 0 6px 28px rgba(201,168,76,0.5);
     }
     .cta-secondary {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.9);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(4px);
+    }
+    .cta-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    /* Scroll indicator */
+    .hero-scroll {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0;
+      animation: heroFadeUp 0.7s ease forwards 1s;
+    }
+    .hero-scroll span {
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .hero-scroll-line {
+      width: 1px;
+      height: 32px;
+      background: linear-gradient(to bottom, rgba(201,168,76,0.6), transparent);
+      animation: scrollBob 2s ease-in-out infinite;
+    }
+    @keyframes scrollBob {
+      0%, 100% { transform: scaleY(1); opacity: 0.6; }
+      50%       { transform: scaleY(1.3); opacity: 1; }
+    }
+
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mobile: hide orb on small screens */
+    @media (max-width: 600px) {
+      .hero-orb { display: none; }
+      .hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); }
+      .hero-ctas { max-width: 100%; }
     }
 
     /* ── TRUST BAR ── */
@@ -567,6 +768,7 @@
   <div class="container">
     <div class="site-logo">Thrive in YOUR <span>Light</span></div>
     <div style="display:flex; gap:10px; align-items:center;">
+      <a href="blog.html" class="header-contact">📝 Blog</a>
       <button class="header-contact" onclick="showTab('contact')">✉ Contact</button>
       <a href="https://lifewave.com/carolinewhitton/store/products" target="_blank" class="header-cta">Visit My Shop →</a>
     </div>
@@ -587,30 +789,58 @@
 </section>
 
 <section class="hero">
+  <!-- Dot-grid texture -->
+  <div class="hero-grid"></div>
+  <!-- Glowing orb -->
+  <div class="hero-orb"></div>
+
   <div class="container">
-    <h1>You Already Have What It Takes.<br><em>Let's Activate It.</em></h1>
-    <p>
-      Lifewave phototherapy patches work with your body's own natural energy — drug-free,
-      non-invasive, and backed by real science. Discover a smarter approach to wellness,
-      energy, and everyday vitality.
+    <!-- Eyebrow -->
+    <div class="hero-eyebrow">Phototherapy · Drug-Free · Science-Backed</div>
+
+    <!-- Main headline -->
+    <h1>
+      <span class="line-white">You Already Have</span>
+      <span class="line-white">What It Takes.</span>
+      <span class="line-gold">Let's Activate It.</span>
+    </h1>
+
+    <!-- Divider -->
+    <div class="hero-divider"></div>
+
+    <!-- Sub-copy -->
+    <p class="hero-sub">
+      Light-based phototherapy patches that work with your body's own energy —
+      nothing enters your skin, nothing to swallow. Backed by 20+ years of science,
+      embraced by people worldwide.
     </p>
-    <div class="hero-buttons">
-      <a href="#" onclick="showTab('products'); return false;" class="cta-btn cta-primary">For People</a>
-      <a href="animals.html" class="cta-btn cta-secondary">For Animals</a>
+
+    <!-- Wide banner CTAs -->
+    <div class="hero-ctas">
+      <a href="#" onclick="showTab('products'); return false;" class="cta-btn cta-primary">Explore Patches for People</a>
+      <a href="animals.html" class="cta-btn cta-secondary">For Animals →</a>
     </div>
-    <div style="margin-top:24px;">
+
+    <!-- X2O floating card — preserved with goldPulse animation -->
+    <div style="margin-top:48px;">
       <style>
         @keyframes goldPulse {
           0%, 100% { box-shadow: 0 0 10px rgba(201,168,76,0.4), 0 0 20px rgba(201,168,76,0.2); }
           50% { box-shadow: 0 0 20px rgba(201,168,76,0.7), 0 0 40px rgba(201,168,76,0.35); }
         }
       </style>
-      <a href="x2o.html" style="display:inline-block;background:linear-gradient(135deg,#0a1e3a,#0f2e50);border:1px solid rgba(201,168,76,0.7);border-radius:16px;padding:20px 36px;text-decoration:none;animation:goldPulse 2.5s ease-in-out infinite;max-width:480px;width:100%;text-align:center;">
+      <a href="x2o.html" style="display:inline-block;background:linear-gradient(135deg,#0a1e3a,#0f2e50);border:1px solid rgba(201,168,76,0.7);border-radius:8px;padding:20px 36px;text-decoration:none;animation:goldPulse 2.5s ease-in-out infinite;max-width:480px;width:100%;text-align:center;">
         <div style="font-family:'Trebuchet MS',sans-serif;font-size:0.72rem;letter-spacing:2.5px;text-transform:uppercase;color:#4db8e8;margin-bottom:6px;">✦ Exclusively from LifeWave</div>
         <div style="font-family:Georgia,serif;font-size:1.3rem;font-weight:700;font-style:italic;color:#f0c040;margin-bottom:4px;">LIGHT Water. LIGHT Years Ahead.</div>
         <div style="font-family:'Trebuchet MS',sans-serif;font-size:0.88rem;color:rgba(255,255,255,0.85);">The only patented light-infused water technology on earth &nbsp;→</div>
       </a>
     </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
   </div>
 </section>
 
