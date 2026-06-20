@@ -4,240 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What Is X39® and How Does It Work? | Thrive in YOUR Light</title>
-  <meta name="description" content="Curious about Lifewave's X39® patch? Here's a plain-English guide to how this phototherapy technology works and what it's designed to support.">
   <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: #050e1c;
-  color: #e8f0f5;
-  line-height: 1.75;
-}
-a { color: #5ecfe0; text-decoration: none; }
-a:hover { text-decoration: underline; }
-code { background: #0d1e2e; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
-blockquote {
-  border-left: 3px solid #2e6b7a;
-  padding: 8px 16px;
-  margin: 16px 0;
-  color: #aac8d5;
-  font-style: italic;
-}
-
-/* Header */
-.site-header {
-  background: #0a1628;
-  border-bottom: 1px solid #1a2e3b;
-  padding: 14px 0;
-  position: sticky; top: 0; z-index: 100;
-}
-.site-header .container {
-  max-width: 900px; margin: 0 auto; padding: 0 20px;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.site-logo {
-  font-size: 1.2rem; font-weight: 700; color: #e8f0f5; letter-spacing: 0.5px;
-}
-.site-logo span { color: #5ecfe0; }
-.header-links { display: flex; gap: 10px; align-items: center; }
-.header-btn {
-  background: #1a2e3b; color: #e8f0f5;
-  border: 1px solid #2e6b7a; border-radius: 6px;
-  padding: 6px 14px; font-size: 0.85rem; cursor: pointer;
-  text-decoration: none; white-space: nowrap;
-}
-.header-btn:hover { background: #2e6b7a; text-decoration: none; }
-
-/* Blog post page */
-.post-hero {
-  background: linear-gradient(135deg, #0a1628 0%, #1a2e3b 100%);
-  padding: 60px 20px 40px;
-  text-align: center;
-}
-.post-tag {
-  display: inline-block;
-  background: #2e6b7a; color: #fff;
-  border-radius: 20px; padding: 4px 14px;
-  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px;
-  text-transform: uppercase; margin-bottom: 18px;
-}
-.post-hero h1 {
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
-  font-weight: 700; line-height: 1.3;
-  max-width: 700px; margin: 0 auto 16px;
-  color: #fff;
-}
-.post-date { color: #7aabb8; font-size: 0.9rem; }
-
-/* Article content */
-.article-wrap {
-  max-width: 720px; margin: 0 auto; padding: 40px 20px 60px;
-}
-.article-wrap h2 {
-  font-size: 1.35rem; font-weight: 700; color: #5ecfe0;
-  margin: 32px 0 12px; border-bottom: 1px solid #1a2e3b; padding-bottom: 6px;
-}
-.article-wrap h3 {
-  font-size: 1.1rem; font-weight: 600; color: #aad4e0;
-  margin: 24px 0 8px;
-}
-.article-wrap h4 { font-size: 1rem; font-weight: 600; margin: 20px 0 6px; }
-.article-wrap p { margin-bottom: 16px; color: #cddde6; }
-.article-wrap ul { margin: 12px 0 16px 24px; }
-.article-wrap li { margin-bottom: 8px; color: #cddde6; }
-.article-wrap strong { color: #e8f0f5; }
-.article-wrap em { color: #aac8d5; }
-.article-wrap a { color: #5ecfe0; }
-
-/* FAQ styling */
-.article-wrap p strong { color: #5ecfe0; }
-
-/* CTA card */
-.cta-card {
-  background: linear-gradient(135deg, #1a2e3b 0%, #0f2030 100%);
-  border: 1px solid #2e6b7a; border-radius: 12px;
-  padding: 32px; text-align: center; margin: 40px 0;
-}
-.cta-card h3 { font-size: 1.2rem; color: #5ecfe0; margin-bottom: 12px; }
-.cta-card p { color: #aac8d5; margin-bottom: 20px; }
-.cta-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #2e6b7a, #1a9ead);
-  color: #fff; font-weight: 700; font-size: 1rem;
-  padding: 14px 32px; border-radius: 8px; text-decoration: none;
-  transition: opacity 0.2s;
-}
-.cta-btn:hover { opacity: 0.88; text-decoration: none; }
-
-/* Disclaimer */
-.disclaimer {
-  background: #0a1628; border: 1px solid #1a2e3b; border-radius: 8px;
-  padding: 16px; margin-top: 40px;
-  font-size: 0.82rem; color: #7a9ab0; font-style: italic;
-  line-height: 1.6;
-}
-
-/* Back link */
-.back-link { margin-bottom: 32px; display: block; font-size: 0.9rem; color: #5ecfe0; }
-.back-link:hover { text-decoration: underline; }
-
-/* Blog index */
-.blog-hero {
-  background: linear-gradient(135deg, #0a1628 0%, #1a2e3b 100%);
-  padding: 60px 20px 40px; text-align: center;
-}
-.blog-hero h1 {
-  font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 700; color: #fff;
-  margin-bottom: 12px;
-}
-.blog-hero p { color: #7aabb8; font-size: 1.05rem; max-width: 520px; margin: 0 auto; }
-
-.blog-grid {
-  max-width: 900px; margin: 0 auto; padding: 40px 20px 60px;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
-}
-.post-card {
-  background: #1a2e3b; border: 1px solid #2e6b7a33;
-  border-radius: 12px; padding: 24px;
-  display: flex; flex-direction: column; gap: 10px;
-  transition: transform 0.15s, box-shadow 0.15s;
-}
-.post-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-}
-.post-card .tag {
-  display: inline-block; background: #2e6b7a;
-  color: #fff; border-radius: 20px; padding: 3px 12px;
-  font-size: 0.74rem; font-weight: 600; letter-spacing: 0.4px;
-  text-transform: uppercase; width: fit-content;
-}
-.post-card h2 {
-  font-size: 1.05rem; font-weight: 700; color: #e8f0f5; line-height: 1.4;
-}
-.post-card .date { font-size: 0.82rem; color: #7aabb8; }
-.post-card .excerpt { font-size: 0.9rem; color: #aac8d5; line-height: 1.6; flex: 1; }
-.post-card .read-more {
-  display: inline-block; color: #5ecfe0;
-  font-size: 0.88rem; font-weight: 600; margin-top: 4px;
-}
-
-/* Footer */
-footer {
-  background: #0a1628; border-top: 1px solid #1a2e3b;
-  padding: 32px 20px; text-align: center;
-  font-size: 0.85rem; color: #4a7a8a;
-}
-footer a { color: #5ecfe0; }
-</style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+      padding: 20px;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { font-size: 2.2em; margin: 30px 0 10px; color: #1a1a1a; }
+    .date-byline { color: #666; font-size: 0.95em; margin-bottom: 5px; }
+    .byline { color: #0066cc; font-weight: 600; margin-bottom: 30px; }
+    h2 { font-size: 1.6em; margin: 25px 0 15px; color: #1a1a1a; }
+    p { margin-bottom: 15px; }
+    .disclaimer {
+      background-color: #f0f4f8;
+      border-left: 4px solid #0066cc;
+      padding: 15px;
+      margin: 30px 0;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+    .author-note {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      padding: 15px;
+      margin: 30px 0;
+      font-size: 0.9em;
+      line-height: 1.5;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
   <div class="container">
-    <div class="site-logo"><a href="/" style="color:inherit;text-decoration:none">Thrive in YOUR <span>Light</span></a></div>
-    <div class="header-links">
-      <a href="blog.html" class="header-btn" style="background:#2e6b7a;">📝 Blog</a>
-      <a href="/#contact" class="header-btn">✉ Contact</a>
-      <a href="https://lifewave.com/carolinewhitton/store/products" target="_blank" class="header-btn">Visit My Shop →</a>
+    <h1>What Is X39® and How Does It Work?</h1>
+    <div class="date-byline">Published: June 20, 2026</div>
+    <div class="byline">By Caroline Whitton, Thrive in YOUR Light — Independent LifeWave Brand Partner | East Texas</div>
+
+    <h2>Understanding X39 Phototherapy</h2>
+    <p>X39 is a non-transdermal patch that uses GaAs (gallium arsenide) phototherapy technology. It's designed to support your body's natural ability to maintain healthy energy levels and support active recovery throughout your daily activities.</p>
+
+    <h2>How the Technology Works</h2>
+    <p>The X39 patch utilizes specific wavelengths of light energy to provide non-invasive energy support. Users typically report noticing a difference in their energy and overall wellness when using the patch consistently as part of their daily routine.</p>
+
+    <h2>Best Practices for Use</h2>
+    <p>For optimal results, apply X39 patches consistently and follow the usage guidelines provided. Many customers integrate X39 into their wellness routines alongside healthy hydration practices and balanced activity levels.</p>
+
+    <h2>Pairing with Hydration</h2>
+    <p>Like all wellness practices, the benefits of X39 work best when combined with proper hydration and a healthy lifestyle. On our East Texas ranch, we've found that consistent use paired with plenty of water supports the kind of noticeable improvements people are looking for in their daily wellness.</p>
+
+    <h2>Long-Term Use and Consistency</h2>
+    <p>The phototherapy approach is designed for ongoing use. Many X39 users report that consistency with daily application leads to the most positive feedback about their wellness journey.</p>
+
+    <div class="disclaimer">
+      <strong>FDA Disclaimer:</strong> These statements have not been evaluated by the Food and Drug Administration. LifeWave products are not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary. Always consult a qualified healthcare professional before starting any new wellness protocol.
+    </div>
+
+    <div class="author-note">
+      <strong>About the Author:</strong> Caroline shares beginner-friendly education about phototherapy patches, hydration, and wellness routines from an East Texas ranch-life perspective. This content is educational and not medical advice. For more information about LifeWave products, visit <a href="https://lifewave.com/carolinewhitton" style="color: #0066cc;">https://lifewave.com/carolinewhitton</a> or email etxladiesoflight@gmail.com.
     </div>
   </div>
-</header>
-
-<section class="post-hero">
-  <div class="post-tag">X39® Patch</div>
-  <h1>What Is X39® and How Does It Work?</h1>
-  <div class="post-date">Published May 22, 2026</div>
-</section>
-
-<div class="article-wrap">
-  <a href="../blog.html" class="back-link">← Back to Blog</a>
-  <p style="color:#7aabb8;font-size:0.88rem;margin-bottom:28px;">By Caroline Whitton, Thrive in YOUR Light — Independent LifeWave Brand Partner | East Texas</p>
-
-<h4>What Is X39® and How Does It Work?</h4>
-<p>You've probably heard people talking about X39®. Maybe a friend mentioned it. Maybe you've seen it pop up in wellness circles. But what exactly is it — and does it actually do anything?</p>
-<p>Let's break it down simply.</p>
-<h4>What Is X39®?</h4>
-<p>X39® is a wearable phototherapy patch made by Lifewave. It's small, discreet, and worn directly on the skin. Unlike a supplement or a topical cream, nothing from the patch is absorbed into your body. Instead, it works by interacting with your skin using low levels of light energy.</p>
-<p>The technology behind it is called photobiomodulation — the idea that light can influence biological processes in the body. Lifewave has been developing this science for over 20 years.</p>
-<h4>The Science: GHK-Cu and Cellular Support</h4>
-<p>At the heart of X39® is a peptide called GHK-Cu. This is a naturally occurring compound in the human body that tends to decline with age. Research suggests that GHK-Cu plays a role in cellular repair, energy regulation, and overall vitality.</p>
-<p>X39® is designed to elevate your body's own GHK-Cu levels through a phototherapy process — essentially using light to signal your body to do something it's naturally capable of doing.</p>
-<h4>What Can You Expect?</h4>
-<p>Results vary from person to person, but X39® is designed to support:</p>
-<p><strong>Sleep Support</strong> Some users report individual experiences with X39® and sleep quality — such as falling asleep more easily or waking feeling refreshed. Individual results vary.</p>
-<p><strong>Natural Energy Support</strong> Without caffeine or stimulants, X39® may support your body's natural energy flow throughout the day — though individual experiences vary.</p>
-<p><strong>Recovery Support</strong> Whether you're active or just dealing with the wear and tear of daily life, X39® may support your body's natural bounce-back processes.</p>
-<p><strong>Overall Wellness</strong> The big picture goal: supporting your body's natural ability to feel and function well — long term.</p>
-<h4>How Do You Use It?</h4>
-<p>X39® is simple. You apply one patch each day to an acupuncture point on your body (Lifewave provides a patch placement guide). Wear it for up to 12 hours, then remove it. Most people start noticing something within the first few days to weeks of consistent use.</p>
-<h4>Is It Safe?</h4>
-<p>X39® is drug-free, non-transdermal, and has no stimulants. Because nothing from the patch enters your body, it's generally well-tolerated. As with any wellness product, it's always a good idea to consult with your healthcare provider if you have specific health concerns.</p>
-<h4>Ready to Try It?</h4>
-<p>If you're curious about X39® or any of Lifewave's phototherapy patches, I'm happy to share more. You can also explore the full product line through the link below.</p>
-<p><strong>[Learn More About X39® →]</strong></p>
-<p><em>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</em></p>
-
-  <div style="background:#0a1628;border:1px solid #1a2e3b;border-radius:8px;padding:16px;margin:32px 0;font-size:0.85rem;color:#7aabb8;font-style:italic;line-height:1.6;">
-    Caroline shares beginner-friendly education about phototherapy patches, hydration, and wellness routines from an East Texas ranch-life perspective. This content is educational and not medical advice.
-  </div>
-  <div class="cta-card">
-    <h3>Ready to Experience It Yourself?</h3>
-    <p>Explore the full Lifewave range and find what supports your wellness goals.</p>
-    <a href="https://lifewave.com/carolinewhitton" target="_blank" class="cta-btn">Visit My Lifewave Shop →</a>
-  </div>
-
-  <div class="disclaimer">
-    These statements have not been evaluated by the Food and Drug Administration.
-    Lifewave products are not intended to diagnose, treat, cure, or prevent any disease.
-    Individual results may vary. Always consult a qualified healthcare professional before
-    starting any new wellness protocol.
-  </div>
-</div>
-
-<footer>
-  <p>© 2026 Thrive in YOUR Light · <a href="mailto:etxladiesoflight@gmail.com">etxladiesoflight@gmail.com</a> · <a href="https://lifewave.com/carolinewhitton" target="_blank">Shop Lifewave →</a></p>
-  <p style="margin-top:8px;font-size:0.78rem;">These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
-</footer>
 </body>
 </html>
